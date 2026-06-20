@@ -1,0 +1,147 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Header } from "@/sections/Header";
+import { CTASection } from "@/sections/Footer/components/CTASection";
+import { Footer } from "@/sections/Footer";
+import { locations } from "@/data/locations";
+import { TrackedTelLink } from "@/components/TrackedTelLink";
+import { categories } from "@/data/categories";
+import { absoluteUrl, brandName, business, citiesLabel } from "@/data/business";
+
+const canonical = absoluteUrl("/about");
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": `${canonical}#webpage`,
+  url: canonical,
+  name: `About ${brandName()} | ${citiesLabel()} Exterior Cleaning Specialists`,
+  description: `Meet ${brandName()} — professional exterior cleaning and lawn maintenance specialists serving ${citiesLabel()} and ${business.region}.`,
+  isPartOf: { "@id": `${business.siteUrl}/#website` },
+  about: { "@id": `${business.siteUrl}/#business` },
+  inLanguage: "en-GB",
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+    { "@type": "ListItem", position: 2, name: "About", item: canonical },
+  ],
+};
+---
+
+<BaseLayout
+  title={`About ${brandName()} | ${citiesLabel()} Exterior Cleaning Specialists`}
+  description={`Meet ${brandName()}. Professional exterior cleaning and lawn maintenance serving ${citiesLabel()} and ${business.region}. Fully insured. Free quotes available.`}
+  canonical={canonical}
+>
+  <div class="text-neutral-600 text-lg not-italic normal-nums font-medium accent-auto bg-[#323232] box-border caret-transparent block tracking-[normal] leading-[27px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-manrope">
+    <Header client:load />
+    <main>
+      <section class="box-border caret-transparent pt-[160px] pb-[70px] md:pt-[220px] md:pb-[100px]">
+        <div class="box-border caret-transparent max-w-[980px] mx-auto px-5 md:px-8 text-center">
+          <p class="text-[#16a34a] text-sm font-semibold uppercase tracking-[0.18em] mb-4">About Us</p>
+          <h1 class="text-white text-[34px] font-bold leading-[44px] mb-5 md:text-[64px] md:leading-[78px]">
+            About {brandName()} — Your Local {citiesLabel()} Exterior Specialists
+          </h1>
+          <p class="text-slate-200 max-w-[720px] mx-auto mb-8">Locally owned. Fully insured. Reliable service across {business.region}.</p>
+          <TrackedTelLink
+            client:load
+            showPhoneNumber
+            prefix="Call "
+            className="text-white text-base bg-[#15803d] font-bold border border-[#15803d] px-8 py-4 rounded-[50px] hover:bg-[#16a34a] transition-colors inline-flex"
+            trackingLocation="about"
+          />
+        </div>
+      </section>
+
+      <section class="box-border caret-transparent pb-[60px]">
+        <div class="box-border caret-transparent max-w-[980px] mx-auto px-5 md:px-8">
+          <div class="bg-white rounded-[20px] p-6 md:p-10 space-y-10">
+            <div>
+              <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">How {brandName()} Got Started</h2>
+              <p class="text-gray-700 leading-7">{brandName()} is a professional exterior cleaning specialist based in Rankinston, serving {business.region}. Driveways, patios, gutters, house washing, grass cutting, lawn care and garden maintenance — fully insured, reliable and offering free quotes. Jake and Martin built the business around practical exterior work that protects properties, improves kerb appeal and saves customers money on costly repairs down the line.</p>
+            </div>
+
+            <div>
+              <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Meet the Team</h2>
+              <div class="flex flex-col md:flex-row gap-6 items-start">
+                <div class="w-32 h-32 rounded-full bg-gray-200 shrink-0 overflow-hidden">
+                  <img src={business.assets.about} alt={`Jake and Martin from ${brandName()} at work in ${business.region}`} width="128" height="128" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div>
+                  <h3 class="text-gray-900 text-xl font-bold mb-1">Jake & Martin — {brandName()}</h3>
+                  <p class="text-gray-600 text-sm mb-3">Owners & Exterior Cleaning Specialists</p>
+                  <p class="text-gray-700 leading-7">Jake and Martin lead {brandName()} with a focus on reliable driveway, patio and roof cleaning, gutter clearing, biocide treatments and lawn care. Customers across {business.region} recommend the team for thorough results, fair pricing and friendly communication on every job.</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Video Introduction</h2>
+              <div class="rounded-xl bg-gray-100 border border-gray-200 p-8 text-center text-gray-500">
+                <p>Watch Jake and Martin introduce {brandName()} — video embed placeholder</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Proudly Serving {citiesLabel()} and Surrounding Areas</h2>
+              <p class="text-gray-700 leading-7 mb-4">{brandName()} covers exterior cleaning, roof moss removal, gutter clearing and lawn care across {business.region}. <a href="/locations" class="text-[#16a34a] hover:underline font-medium">View all service areas</a>.</p>
+              <div class="grid grid-cols-2 gap-2 md:grid-cols-3">
+                {locations.map((location) => (
+                  <a href={`/locations/${location.slug}`} class="text-[#16a34a] hover:underline text-sm">{location.name}</a>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Licensed, Insured, and Guaranteed</h2>
+              <ul class="text-gray-700 space-y-2 list-disc pl-5">
+                <li>Free quotes on all exterior and lawn care work</li>
+                <li>Professional equipment and biocide treatments where needed</li>
+                <li>Trusted by customers across {citiesLabel()} and {business.region}</li>
+                <li>Fully insured — reliable local service</li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Our Services</h2>
+              <div class="grid grid-cols-1 gap-3 md:grid-cols-2">
+                {categories.map((category) => (
+                  <a href={`/${category.slug}`} class="text-[#16a34a] hover:underline">{category.title}</a>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Find Us on Google</h2>
+              <div class="rounded-xl overflow-hidden border border-gray-200 h-64 bg-gray-100 flex items-center justify-center text-gray-500">
+                <p>Google Business Profile embed placeholder — paste your embed code here</p>
+              </div>
+              <a href={business.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-[#16a34a] hover:underline">View on Google Maps</a>
+            </div>
+
+            <div>
+              <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Follow Us</h2>
+              <a href={business.facebookUrl} target="_blank" rel="noopener noreferrer" class="text-[#16a34a] hover:underline">{brandName()} on Facebook</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="box-border caret-transparent pb-[80px]">
+        <div class="box-border caret-transparent max-w-[980px] mx-auto px-5 md:px-8">
+          <h2 class="text-white text-2xl font-bold mb-4 text-center md:text-3xl">See What Our Customers Say</h2>
+          <div class="rounded-xl bg-neutral-900/75 border border-white/10 p-8 text-center text-slate-300 min-h-[200px] flex items-center justify-center">
+            <p>Google Reviews widget placeholder — paste your embed code here. <a href="/reviews" class="text-[#16a34a] hover:underline">View reviews on our website</a></p>
+          </div>
+        </div>
+      </section>
+
+      <CTASection client:load />
+    </main>
+    <Footer client:load />
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(aboutSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+</BaseLayout>
