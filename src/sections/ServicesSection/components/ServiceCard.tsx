@@ -28,7 +28,7 @@ export const ServiceCard = (props: ServiceCardProps) => {
           </p>
         </div>
       </div>
-      <div className="relative bg-[#323232] box-border caret-transparent z-[2] -ml-5 -mb-5 pr-2.5 pt-2.5 rounded-tr-[30px] md:mb-[-30px] md:ml-[-30px]">
+      <div className="relative bg-[#111111] box-border caret-transparent z-[2] -ml-5 -mb-5 pr-2.5 pt-2.5 rounded-tr-[30px] md:mb-[-30px] md:ml-[-30px]">
         <img
           src="https://c.animaapp.com/mial13ktyN5Jkh/assets/67a31be1140edc3afbf591be_e2d97ed2be41fc7b4874e6bea3c7ef44_shape-02.svg"
           alt=""

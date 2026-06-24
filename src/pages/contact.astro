@@ -74,7 +74,7 @@ const faqSchema = buildFaqSchema(homepageFaqs);
 
 >
 
-    <div class="text-neutral-600 text-lg not-italic normal-nums font-medium accent-auto bg-[#323232] box-border caret-transparent block tracking-[normal] leading-[27px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-manrope">
+    <div class="text-neutral-600 text-lg not-italic normal-nums font-medium accent-auto bg-[#111111] box-border caret-transparent block tracking-[normal] leading-[27px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-manrope">
 
       <Header client:load />
 
@@ -90,19 +90,19 @@ const faqSchema = buildFaqSchema(homepageFaqs);
 
             <h2 class="text-white text-2xl font-bold mb-4 md:text-3xl">Areas We Serve</h2>
 
-            <p class="text-slate-200 mb-6">{brandName()} covers {citiesLabel()} and towns across {business.region}. Not sure if we serve your area? Call <TrackedTelLink client:load showPhoneNumber className="text-[#16a34a] hover:underline font-semibold" trackingLocation="contact" /> and we will let you know.</p>
+            <p class="text-slate-200 mb-6">{brandName()} covers {citiesLabel()} and towns across {business.region}. Not sure if we serve your area? Call <TrackedTelLink client:load showPhoneNumber className="text-[#ea580c] hover:underline font-semibold" trackingLocation="contact" /> and we will let you know.</p>
 
             <div class="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 mb-4">
 
               {locations.map((location) => (
 
-                <a href={`/locations/${location.slug}`} class="text-slate-200 text-sm hover:text-[#16a34a] hover:underline">{location.name}</a>
+                <a href={`/locations/${location.slug}`} class="text-slate-200 text-sm hover:text-[#ea580c] hover:underline">{location.name}</a>
 
               ))}
 
             </div>
 
-            <a href="/locations" class="text-[#16a34a] hover:underline font-medium text-sm">View all service areas →</a>
+            <a href="/locations" class="text-[#ea580c] hover:underline font-medium text-sm">View all service areas →</a>
 
           </div>
 

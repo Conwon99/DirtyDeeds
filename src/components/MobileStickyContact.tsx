@@ -15,7 +15,7 @@ export const MobileStickyContact = () => {
       {!isContactPage && (
         <a
           href="/contact"
-          className="bg-[#15803d] text-white font-bold w-16 h-16 rounded-full hover:bg-[#16a34a] transition-all duration-300 flex items-center justify-center touch-manipulation"
+          className="bg-[#c2410c] text-white font-bold w-16 h-16 rounded-full hover:bg-[#ea580c] transition-all duration-300 flex items-center justify-center touch-manipulation"
           aria-label="Send message"
         >
           <svg

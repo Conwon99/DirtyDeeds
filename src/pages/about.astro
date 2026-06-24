@@ -35,12 +35,12 @@ const breadcrumbSchema = {
   description={`Meet ${brandName()}. Professional exterior cleaning serving ${citiesLabel()}. Fully insured. Free quotes available.`}
   canonical={canonical}
 >
-  <div class="text-neutral-600 text-lg not-italic normal-nums font-medium accent-auto bg-[#323232] box-border caret-transparent block tracking-[normal] leading-[27px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-manrope">
+  <div class="text-neutral-600 text-lg not-italic normal-nums font-medium accent-auto bg-[#111111] box-border caret-transparent block tracking-[normal] leading-[27px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-manrope">
     <Header client:load />
     <main>
       <section class="box-border caret-transparent pt-[160px] pb-[70px] md:pt-[220px] md:pb-[100px]">
         <div class="box-border caret-transparent max-w-[980px] mx-auto px-5 md:px-8 text-center">
-          <p class="text-[#16a34a] text-sm font-semibold uppercase tracking-[0.18em] mb-4">About Us</p>
+          <p class="text-[#ea580c] text-sm font-semibold uppercase tracking-[0.18em] mb-4">About Us</p>
           <h1 class="text-white text-[34px] font-bold leading-[44px] mb-5 md:text-[64px] md:leading-[78px]">
             About {brandName()} — Your Local {citiesLabel()} Exterior Specialists
           </h1>
@@ -49,7 +49,7 @@ const breadcrumbSchema = {
             client:load
             showPhoneNumber
             prefix="Call "
-            className="text-white text-base bg-[#15803d] font-bold border border-[#15803d] px-8 py-4 rounded-[50px] hover:bg-[#16a34a] transition-colors inline-flex"
+            className="text-white text-base bg-[#c2410c] font-bold border border-[#c2410c] px-8 py-4 rounded-[50px] hover:bg-[#ea580c] transition-colors inline-flex"
             trackingLocation="about"
           />
         </div>
@@ -86,10 +86,10 @@ const breadcrumbSchema = {
 
             <div>
               <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Proudly Serving {citiesLabel()} and Surrounding Areas</h2>
-              <p class="text-gray-700 leading-7 mb-4">{brandName()} covers exterior cleaning, roof moss removal and gutter clearing across {business.region}. <a href="/locations" class="text-[#16a34a] hover:underline font-medium">View all service areas</a>.</p>
+              <p class="text-gray-700 leading-7 mb-4">{brandName()} covers exterior cleaning, roof moss removal and gutter clearing across {business.region}. <a href="/locations" class="text-[#ea580c] hover:underline font-medium">View all service areas</a>.</p>
               <div class="grid grid-cols-2 gap-2 md:grid-cols-3">
                 {locations.map((location) => (
-                  <a href={`/locations/${location.slug}`} class="text-[#16a34a] hover:underline text-sm">{location.name}</a>
+                  <a href={`/locations/${location.slug}`} class="text-[#ea580c] hover:underline text-sm">{location.name}</a>
                 ))}
               </div>
             </div>
@@ -108,7 +108,7 @@ const breadcrumbSchema = {
               <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Our Services</h2>
               <div class="grid grid-cols-1 gap-3 md:grid-cols-2">
                 {categories.map((category) => (
-                  <a href={`/${category.slug}`} class="text-[#16a34a] hover:underline">{category.title}</a>
+                  <a href={`/${category.slug}`} class="text-[#ea580c] hover:underline">{category.title}</a>
                 ))}
               </div>
             </div>
@@ -118,12 +118,12 @@ const breadcrumbSchema = {
               <div class="rounded-xl overflow-hidden border border-gray-200 h-64 bg-gray-100 flex items-center justify-center text-gray-500">
                 <p>Google Business Profile embed placeholder — paste your embed code here</p>
               </div>
-              <a href={business.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-[#16a34a] hover:underline">View on Google Maps</a>
+              <a href={business.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-[#ea580c] hover:underline">View on Google Maps</a>
             </div>
 
             <div>
               <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Follow Us</h2>
-              <a href={business.facebookUrl} target="_blank" rel="noopener noreferrer" class="text-[#16a34a] hover:underline">{brandName()} on Facebook</a>
+              <a href={business.facebookUrl} target="_blank" rel="noopener noreferrer" class="text-[#ea580c] hover:underline">{brandName()} on Facebook</a>
             </div>
           </div>
         </div>
@@ -133,7 +133,7 @@ const breadcrumbSchema = {
         <div class="box-border caret-transparent max-w-[980px] mx-auto px-5 md:px-8">
           <h2 class="text-white text-2xl font-bold mb-4 text-center md:text-3xl">See What Our Customers Say</h2>
           <div class="rounded-xl bg-neutral-900/75 border border-white/10 p-8 text-center text-slate-300 min-h-[200px] flex items-center justify-center">
-            <p>Google Reviews widget placeholder — paste your embed code here. <a href="/reviews" class="text-[#16a34a] hover:underline">View reviews on our website</a></p>
+            <p>Google Reviews widget placeholder — paste your embed code here. <a href="/reviews" class="text-[#ea580c] hover:underline">View reviews on our website</a></p>
           </div>
         </div>
       </section>

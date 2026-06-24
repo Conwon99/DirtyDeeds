@@ -34,7 +34,7 @@ export const ReviewsSection = () => {
           <button type="button" onClick={() => scroll("right")} className="hidden md:flex shrink-0 w-12 h-12 items-center justify-center rounded-full bg-neutral-700 text-white hover:bg-neutral-600 transition" aria-label="Next reviews"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg></button>
         </div>
         <div className="text-center md:text-left mt-8">
-          <a href="/reviews" className="text-[#16a34a] hover:underline font-semibold text-base">View all reviews →</a>
+          <a href="/reviews" className="text-[#ea580c] hover:underline font-semibold text-base">View all reviews →</a>
         </div>
       </div>
     </section>

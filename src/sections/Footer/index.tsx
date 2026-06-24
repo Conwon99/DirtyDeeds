@@ -14,7 +14,7 @@ export const Footer = () => {
 
   return (
 
-    <section className="bg-[#323232] box-border caret-transparent pt-[60px] pb-7 md:pt-[100px] md:pb-10">
+    <section className="bg-[#111111] box-border caret-transparent pt-[60px] pb-7 md:pt-[100px] md:pb-10">
 
       <div className="box-border caret-transparent max-w-[1204px] mx-auto px-4 sm:px-5 md:px-8">
 
@@ -52,7 +52,7 @@ export const Footer = () => {
 
                   rel="noopener noreferrer"
 
-                  className="items-center bg-white box-border caret-transparent flex h-10 justify-center max-w-full underline w-10 rounded-[50%] hover:bg-[#15803d] hover:decoration-transparent transition-colors duration-300"
+                  className="items-center bg-white box-border caret-transparent flex h-10 justify-center max-w-full underline w-10 rounded-[50%] hover:bg-[#c2410c] hover:decoration-transparent transition-colors duration-300"
 
                   aria-label={`${brandName()} on Facebook`}
 
@@ -86,31 +86,31 @@ export const Footer = () => {
 
             </div>
 
-            <a href="/" className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300">
+            <a href="/" className="text-white/80 text-sm box-border caret-transparent hover:text-[#ea580c] hover:decoration-transparent transition-colors duration-300">
 
               Home
 
             </a>
 
-            <a href="/services" className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300">
+            <a href="/services" className="text-white/80 text-sm box-border caret-transparent hover:text-[#ea580c] hover:decoration-transparent transition-colors duration-300">
 
               Services
 
             </a>
 
-            <a href="/about" className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300">
+            <a href="/about" className="text-white/80 text-sm box-border caret-transparent hover:text-[#ea580c] hover:decoration-transparent transition-colors duration-300">
 
               About
 
             </a>
 
-            <a href="/reviews" className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300">
+            <a href="/reviews" className="text-white/80 text-sm box-border caret-transparent hover:text-[#ea580c] hover:decoration-transparent transition-colors duration-300">
 
               Reviews
 
             </a>
 
-            <a href="/contact" className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300">
+            <a href="/contact" className="text-white/80 text-sm box-border caret-transparent hover:text-[#ea580c] hover:decoration-transparent transition-colors duration-300">
 
               Contact
 
@@ -118,7 +118,7 @@ export const Footer = () => {
 
             <details className="group box-border caret-transparent mt-2">
 
-              <summary className="text-white text-sm font-semibold box-border caret-transparent cursor-pointer hover:text-[#16a34a]">
+              <summary className="text-white text-sm font-semibold box-border caret-transparent cursor-pointer hover:text-[#ea580c]">
 
                 Services
 
@@ -128,7 +128,7 @@ export const Footer = () => {
 
                 {categories.map((category) => (
 
-                  <a key={category.slug} href={`/${category.slug}`} className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300">
+                  <a key={category.slug} href={`/${category.slug}`} className="text-white/80 text-sm box-border caret-transparent hover:text-[#ea580c] hover:decoration-transparent transition-colors duration-300">
 
                     {category.name}
 
@@ -136,18 +136,18 @@ export const Footer = () => {
 
                 ))}
 
-                <a href="/locations/ayr/exterior-cleaning-ayr-kilmarnock" className="text-white/60 text-xs box-border caret-transparent hover:text-[#16a34a] pl-3 transition-colors duration-300">Exterior Cleaning in Ayr</a>
+                <a href="/locations/ayr/exterior-cleaning-ayr-kilmarnock" className="text-white/60 text-xs box-border caret-transparent hover:text-[#ea580c] pl-3 transition-colors duration-300">Exterior Cleaning in Ayr</a>
 
-                <a href="/locations/kilmarnock/exterior-cleaning-ayr-kilmarnock" className="text-white/60 text-xs box-border caret-transparent hover:text-[#16a34a] pl-3 transition-colors duration-300">Exterior Cleaning in Kilmarnock</a>
+                <a href="/locations/kilmarnock/exterior-cleaning-ayr-kilmarnock" className="text-white/60 text-xs box-border caret-transparent hover:text-[#ea580c] pl-3 transition-colors duration-300">Exterior Cleaning in Kilmarnock</a>
 
-                <a href="/locations/ayr/roof-cleaning-ayr-kilmarnock" className="text-white/60 text-xs box-border caret-transparent hover:text-[#16a34a] pl-3 transition-colors duration-300">Roof Cleaning in Ayr</a>
+                <a href="/locations/ayr/roof-cleaning-ayr-kilmarnock" className="text-white/60 text-xs box-border caret-transparent hover:text-[#ea580c] pl-3 transition-colors duration-300">Roof Cleaning in Ayr</a>
 
-                <a href="/locations/kilmarnock/roof-cleaning-ayr-kilmarnock" className="text-white/60 text-xs box-border caret-transparent hover:text-[#16a34a] pl-3 transition-colors duration-300">Roof Cleaning in Kilmarnock</a>
+                <a href="/locations/kilmarnock/roof-cleaning-ayr-kilmarnock" className="text-white/60 text-xs box-border caret-transparent hover:text-[#ea580c] pl-3 transition-colors duration-300">Roof Cleaning in Kilmarnock</a>
 
 
                 {services.filter((s) => s.slug !== "free-quotes").map((service) => (
 
-                  <a key={service.slug} href={`/services/${service.slug}`} className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300">
+                  <a key={service.slug} href={`/services/${service.slug}`} className="text-white/80 text-sm box-border caret-transparent hover:text-[#ea580c] hover:decoration-transparent transition-colors duration-300">
 
                     {service.shortTitle}
 
@@ -161,7 +161,7 @@ export const Footer = () => {
 
             <details className="group box-border caret-transparent mt-2">
 
-              <summary className="text-white text-sm font-semibold box-border caret-transparent cursor-pointer hover:text-[#16a34a]">
+              <summary className="text-white text-sm font-semibold box-border caret-transparent cursor-pointer hover:text-[#ea580c]">
 
                 Locations
 
@@ -169,7 +169,7 @@ export const Footer = () => {
 
               <div className="box-border caret-transparent flex flex-col gap-y-2 mt-3 pl-3 max-h-48 overflow-y-auto">
 
-                <a href="/locations" className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300 font-medium">
+                <a href="/locations" className="text-white/80 text-sm box-border caret-transparent hover:text-[#ea580c] hover:decoration-transparent transition-colors duration-300 font-medium">
 
                   All Locations
 
@@ -177,7 +177,7 @@ export const Footer = () => {
 
                 {locations.map((location) => (
 
-                  <a key={location.slug} href={`/locations/${location.slug}`} className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300">
+                  <a key={location.slug} href={`/locations/${location.slug}`} className="text-white/80 text-sm box-border caret-transparent hover:text-[#ea580c] hover:decoration-transparent transition-colors duration-300">
 
                     {location.name}
 
@@ -205,11 +205,11 @@ export const Footer = () => {
 
               showIcon={false}
 
-              className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300"
+              className="text-white/80 text-sm box-border caret-transparent hover:text-[#ea580c] hover:decoration-transparent transition-colors duration-300"
 
             />
 
-            <a href={`mailto:${business.email}`} className="text-white/80 text-sm box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent transition-colors duration-300">
+            <a href={`mailto:${business.email}`} className="text-white/80 text-sm box-border caret-transparent hover:text-[#ea580c] hover:decoration-transparent transition-colors duration-300">
 
               {business.email}
 
@@ -309,7 +309,7 @@ export const Footer = () => {
 
                 rel="noopener noreferrer"
 
-                className="text-white/80 text-xs box-border caret-transparent hover:text-[#16a34a] hover:decoration-transparent underline transition-colors duration-300"
+                className="text-white/80 text-xs box-border caret-transparent hover:text-[#ea580c] hover:decoration-transparent underline transition-colors duration-300"
 
               >
 

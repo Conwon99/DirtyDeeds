@@ -14,7 +14,7 @@ export const ExperienceContent = () => {
         <div className="box-border caret-transparent mb-5 md:mb-[50px]">
           <ul className="text-white text-sm sm:text-base md:text-lg box-border caret-transparent list-none pl-0 space-y-2 md:space-y-3">
             <li className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#16a34a] flex-shrink-0">
+              <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#ea580c] flex-shrink-0">
                 <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
@@ -22,7 +22,7 @@ export const ExperienceContent = () => {
               <span className="text-white font-medium">Driveway & Patio Cleaning</span>
             </li>
             <li className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#16a34a] flex-shrink-0">
+              <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#ea580c] flex-shrink-0">
                 <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
@@ -30,7 +30,7 @@ export const ExperienceContent = () => {
               <span className="text-white font-medium">Decking & Composite Cleaning</span>
             </li>
             <li className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#16a34a] flex-shrink-0">
+              <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#ea580c] flex-shrink-0">
                 <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
@@ -38,7 +38,7 @@ export const ExperienceContent = () => {
               <span className="text-white font-medium">Soft Wash & House Washing</span>
             </li>
             <li className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#16a34a] flex-shrink-0">
+              <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#ea580c] flex-shrink-0">
                 <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
@@ -46,7 +46,7 @@ export const ExperienceContent = () => {
               <span className="text-white font-medium">Roof Cleaning & Moss Removal</span>
             </li>
             <li className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#16a34a] flex-shrink-0">
+              <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#ea580c] flex-shrink-0">
                 <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
@@ -54,7 +54,7 @@ export const ExperienceContent = () => {
               <span className="text-white font-medium">Gutter Clearing & Fascia Cleaning</span>
             </li>
             <li className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#16a34a] flex-shrink-0">
+              <div className="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#ea580c] flex-shrink-0">
                 <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
@@ -65,7 +65,7 @@ export const ExperienceContent = () => {
         </div>
         <a
           href="/contact"
-          className="text-white text-sm bg-[#15803d] box-border caret-transparent inline-block leading-[19.6px] text-center border border-[#15803d] px-5 py-2 rounded-[50px] border-solid md:text-lg md:leading-[25.2px] md:px-[30px] md:py-3 hover:bg-[#16a34a] hover:decoration-transparent transition-colors duration-300"
+          className="text-white text-sm bg-[#c2410c] box-border caret-transparent inline-block leading-[19.6px] text-center border border-[#c2410c] px-5 py-2 rounded-[50px] border-solid md:text-lg md:leading-[25.2px] md:px-[30px] md:py-3 hover:bg-[#ea580c] hover:decoration-transparent transition-colors duration-300"
         >
           Contact us
         </a>

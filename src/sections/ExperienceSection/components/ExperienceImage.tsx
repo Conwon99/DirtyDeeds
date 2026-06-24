@@ -25,7 +25,7 @@ export const ExperienceImage = () => {
         ))}
         <div
           className="absolute inset-0 pointer-events-none rounded-[20px]"
-          style={{ background: "#323232", mixBlendMode: "multiply", opacity: 0.4 }}
+          style={{ background: "#111111", mixBlendMode: "multiply", opacity: 0.4 }}
         />
         <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
           {images.map((_, i) => (

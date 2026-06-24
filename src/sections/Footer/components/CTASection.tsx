@@ -15,7 +15,7 @@ export const CTASection = () => {
           </p>
           <div className="flex flex-col items-center gap-4 w-full max-w-2xl">
             <a href="/contact"
-              className="text-white text-xl font-bold bg-[#15803d] box-border caret-transparent inline-flex items-center justify-center gap-x-4 leading-[28px] text-center border border-[#15803d] px-8 py-4 rounded-[50px] border-solid md:text-2xl md:leading-[36px] md:px-12 md:py-6 hover:bg-[#16a34a] hover:decoration-transparent transition-colors duration-300 min-h-[64px] md:min-h-[80px] w-full"
+              className="text-white text-xl font-bold bg-[#c2410c] box-border caret-transparent inline-flex items-center justify-center gap-x-4 leading-[28px] text-center border border-[#c2410c] px-8 py-4 rounded-[50px] border-solid md:text-2xl md:leading-[36px] md:px-12 md:py-6 hover:bg-[#ea580c] hover:decoration-transparent transition-colors duration-300 min-h-[64px] md:min-h-[80px] w-full"
             >
               Get a Free Quote
             </a>
@@ -23,7 +23,7 @@ export const CTASection = () => {
               variant="default"
               iconSrc="https://c.animaapp.com/mhooxuovKXaEfR/assets/670f86de88858acaf330ddd9_phone.svg"
               iconAlt={`Call ${brandName()}`}
-              className="text-white text-lg font-semibold bg-[#15803d] box-border caret-transparent inline-flex items-center justify-center gap-x-3 text-center border border-[#15803d] px-8 py-4 rounded-[50px] border-solid md:text-xl md:leading-[28px] md:px-12 md:py-6 hover:bg-[#16a34a] hover:decoration-transparent transition-colors duration-300 min-h-[64px] md:min-h-[80px] w-full"
+              className="text-white text-lg font-semibold bg-[#c2410c] box-border caret-transparent inline-flex items-center justify-center gap-x-3 text-center border border-[#c2410c] px-8 py-4 rounded-[50px] border-solid md:text-xl md:leading-[28px] md:px-12 md:py-6 hover:bg-[#ea580c] hover:decoration-transparent transition-colors duration-300 min-h-[64px] md:min-h-[80px] w-full"
               displayClassName="text-white text-lg font-semibold md:text-xl"
               showIcon={true}
             />

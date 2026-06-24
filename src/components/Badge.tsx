@@ -1,6 +1,6 @@
 export const Badge = () => {
   return (
-    <div className="absolute bg-[#323232] box-border caret-transparent pt-2.5 pb-[15px] px-[15px] right-1/4 top-[0%] md:pl-5 md:pr-[25px] md:pt-[15px] md:pb-[25px] md:right-[22%]">
+    <div className="absolute bg-[#111111] box-border caret-transparent pt-2.5 pb-[15px] px-[15px] right-1/4 top-[0%] md:pl-5 md:pr-[25px] md:pt-[15px] md:pb-[25px] md:right-[22%]">
       <h2 className="text-white text-4xl font-bold box-border caret-transparent leading-[25.2px] md:text-[56px] md:leading-[39.2px]">
         30+
       </h2>

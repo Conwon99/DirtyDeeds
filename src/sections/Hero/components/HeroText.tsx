@@ -18,7 +18,7 @@ export const HeroButtons = () => {
     <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
       <a
         href="/contact"
-        className="inline-flex items-center gap-x-3 text-white bg-[#15803d] hover:bg-[#16a34a] px-6 py-3 md:px-10 md:py-5 rounded-[100px] font-semibold transition-colors duration-300 text-base md:text-xl lg:text-2xl"
+        className="inline-flex items-center gap-x-3 text-white bg-[#c2410c] hover:bg-[#ea580c] px-6 py-3 md:px-10 md:py-5 rounded-[100px] font-semibold transition-colors duration-300 text-base md:text-xl lg:text-2xl"
       >
         <svg
           className="h-5 w-5 md:h-7 md:w-7 lg:h-8 lg:w-8"
