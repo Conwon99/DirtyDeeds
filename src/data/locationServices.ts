@@ -38,7 +38,7 @@ type CategoryContentConfig = {
 
 const categoryConfigs: CategoryContentConfig[] = [
   {
-    slug: "exterior-cleaning-ayr-kilmarnock",
+    slug: "exterior-cleaning-ayrshire",
     serviceName: "Exterior Cleaning",
     serviceNameLower: "exterior cleaning",
     titleSuffix: "Exterior Cleaning",
@@ -70,7 +70,7 @@ const categoryConfigs: CategoryContentConfig[] = [
     ],
   },
   {
-    slug: "roof-cleaning-ayr-kilmarnock",
+    slug: "roof-cleaning-ayrshire",
     serviceName: "Roof Cleaning",
     serviceNameLower: "roof cleaning",
     titleSuffix: "Roof Cleaning",

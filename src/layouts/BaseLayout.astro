@@ -108,7 +108,7 @@ const websiteSchema = {
     <meta name="author" content={business.alternateName} />
     <meta name="language" content="English" />
     <meta name="geo.region" content={business.geoRegion} />
-    <meta name="geo.placename" content={`${business.primaryCity} and ${business.secondaryCity}`} />
+    <meta name="geo.placename" content={business.region} />
     <meta name="theme-color" content="#c2410c" />
     <meta name="robots" content={robots || "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
     

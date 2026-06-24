@@ -6,6 +6,12 @@
 /sitemap.xml  /sitemap.xml  200
 /favicon.ico  /favicon.ico  200
 
+# 301 redirects — category slug rename (ayr-kilmarnock → ayrshire)
+/exterior-cleaning-ayr-kilmarnock   /exterior-cleaning-ayrshire   301
+/roof-cleaning-ayr-kilmarnock       /roof-cleaning-ayrshire       301
+/locations/:town/exterior-cleaning-ayr-kilmarnock   /locations/:town/exterior-cleaning-ayrshire   301
+/locations/:town/roof-cleaning-ayr-kilmarnock       /locations/:town/roof-cleaning-ayrshire       301
+
 # Prevent 404s for common requests
 /admin/*      /index.html   404
 /api/*        /index.html   404

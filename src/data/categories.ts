@@ -15,7 +15,7 @@ export type ServiceCategory = {
 
 export const categories: ServiceCategory[] = [
   {
-    slug: "exterior-cleaning-ayr-kilmarnock",
+    slug: "exterior-cleaning-ayrshire",
     name: "Exterior Cleaning",
     title: `Exterior Cleaning in ${citiesLabel()}`,
     description: `Professional driveway, patio, decking and soft wash cleaning in ${citiesLabel()} and across ${business.region}. Weed removal, pressure washing and biocide treatments. Free quotes.`,
@@ -31,7 +31,7 @@ export const categories: ServiceCategory[] = [
     ],
   },
   {
-    slug: "roof-cleaning-ayr-kilmarnock",
+    slug: "roof-cleaning-ayrshire",
     name: "Roof Cleaning",
     title: `Roof Cleaning in ${citiesLabel()}`,
     description: `Roof cleaning, moss removal, gutter clearing and fascia cleaning in ${citiesLabel()} and ${business.region}. Scrape and biocide method. Fully insured. Free quotes.`,

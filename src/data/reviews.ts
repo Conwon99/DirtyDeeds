@@ -16,7 +16,7 @@ export const reviews: CustomerReview[] = [
     meta: "Facebook review",
     time: "recommended",
     initial: "X",
-    initialBg: "bg-green-600",
+    initialBg: "bg-orange-700",
     text: "Very impressed with the work done to my home roof all clean and treated, gutters replaced, driveway all cleaned. Highly recommended these guys — great contact as well. Thanks again Jake.",
   },
   {
@@ -24,7 +24,7 @@ export const reviews: CustomerReview[] = [
     meta: "Facebook review",
     time: "recommended",
     initial: "S",
-    initialBg: "bg-emerald-500",
+    initialBg: "bg-orange-500",
     text: "Jake came and power washed, deep cleaned and re-sanded our driveway, AstroTurf and decking, made a fab job and good prices, highly recommend.",
   },
   {
@@ -32,7 +32,7 @@ export const reviews: CustomerReview[] = [
     meta: "Facebook review",
     time: "recommended",
     initial: "J",
-    initialBg: "bg-lime-600",
+    initialBg: "bg-orange-600",
     text: "I give Dirty Deeds a 5 star rating. After the first power wash clean, Jake followed up with a soft wash, including all areas, windows, doors and fencing. Every area was safely chemically treated to stop weeds coming back and is looking absolutely perfect. Many thanks.",
   },
   {
@@ -40,7 +40,7 @@ export const reviews: CustomerReview[] = [
     meta: "Facebook review",
     time: "recommended",
     initial: "L",
-    initialBg: "bg-teal-600",
+    initialBg: "bg-orange-400",
     text: "Recently power washed my driveway — it now looks like new. Was amazed with results. Reliable, trustworthy, very pleasant and arrived on time. Would recommend this company.",
   },
 ];
