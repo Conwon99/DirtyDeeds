@@ -209,11 +209,6 @@ export const Footer = () => {
 
             />
 
-            <a href={`mailto:${business.email}`} className="text-white/80 text-sm box-border caret-transparent hover:text-[#ea580c] hover:decoration-transparent transition-colors duration-300">
-
-              {business.email}
-
-            </a>
 
 
 
