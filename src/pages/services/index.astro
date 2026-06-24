@@ -15,8 +15,8 @@ const pageSchema = {
   "@type": "WebPage",
   "@id": `${canonical}#webpage`,
   url: canonical,
-  name: `Exterior Cleaning & Lawn Care Services in ${citiesLabel()} | ${brandName()}`,
-  description: `Full list of exterior cleaning services from ${brandName()} across ${citiesLabel()} and ${business.region}. Driveway, patio, roof cleaning and lawn care.`,
+  name: `Exterior Cleaning Services in ${citiesLabel()} | ${brandName()}`,
+  description: `Full list of exterior cleaning services from ${brandName()} across ${citiesLabel()}. Driveway, patio, roof cleaning, gutter clearing and soft wash.`,
   isPartOf: { "@id": `${business.siteUrl}/#website` },
   inLanguage: "en-GB",
 };
@@ -32,7 +32,7 @@ const breadcrumbSchema = {
 
 <BaseLayout
   title={`Exterior Cleaning Services in ${citiesLabel()} | ${brandName()}`}
-  description={`Full list of driveway, patio, roof cleaning, gutter clearing and lawn care services in ${citiesLabel()} and ${business.region}. Fully insured exterior specialists, free quotes.`}
+  description={`Full list of driveway, patio, roof cleaning, gutter clearing and soft wash services in ${citiesLabel()}. Fully insured exterior specialists, free quotes.`}
   canonical={canonical}
 >
   <div class="text-neutral-600 text-lg not-italic normal-nums font-medium accent-auto bg-[#323232] box-border caret-transparent block tracking-[normal] leading-[27px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-manrope">
@@ -42,10 +42,10 @@ const breadcrumbSchema = {
         <div class="box-border caret-transparent max-w-[1204px] mx-auto px-5 md:px-8 text-center">
           <p class="text-[#16a34a] text-sm font-semibold uppercase tracking-[0.18em] mb-4">All Services</p>
           <h1 class="text-white text-[34px] font-bold box-border caret-transparent leading-[44px] mb-5 md:text-[64px] md:leading-[78px]">
-            Exterior Cleaning & Lawn Care Services in <span class="text-[#16a34a]">{citiesLabel()}</span>
+            Exterior Cleaning Services in <span class="text-[#16a34a]">{citiesLabel()}</span>
           </h1>
           <p class="text-slate-200 box-border caret-transparent max-w-[780px] mx-auto mb-8">
-            Find the service you need below or call {brandName()} on <TrackedTelLink client:load showPhoneNumber className="text-[#16a34a] hover:underline font-semibold" trackingLocation="services" />. We handle driveway cleaning, patio cleaning, roof moss removal, gutter clearing, soft wash and lawn care across {business.region}.
+            Find the service you need below or call {brandName()} on <TrackedTelLink client:load showPhoneNumber className="text-[#16a34a] hover:underline font-semibold" trackingLocation="services" />. We handle driveway cleaning, patio cleaning, roof moss removal, gutter clearing and soft wash across {citiesLabel()}.
           </p>
           <TrackedTelLink
             client:load

@@ -30,7 +30,7 @@ export const Footer = () => {
 
             <p className="text-white/80 text-sm box-border caret-transparent max-w-xs leading-relaxed">
 
-              Exterior cleaning and lawn care specialists serving {citiesLabel()}, {business.region} and surrounding areas. Driveways, patios, roofs, gutters and gardens handled.
+              Exterior cleaning specialists serving {citiesLabel()} and surrounding areas. Driveways, patios, roofs and gutters handled.
 
             </p>
 
@@ -143,6 +143,7 @@ export const Footer = () => {
                 <a href="/locations/ayr/roof-cleaning-ayr-kilmarnock" className="text-white/60 text-xs box-border caret-transparent hover:text-[#16a34a] pl-3 transition-colors duration-300">Roof Cleaning in Ayr</a>
 
                 <a href="/locations/kilmarnock/roof-cleaning-ayr-kilmarnock" className="text-white/60 text-xs box-border caret-transparent hover:text-[#16a34a] pl-3 transition-colors duration-300">Roof Cleaning in Kilmarnock</a>
+
 
                 {services.filter((s) => s.slug !== "free-quotes").map((service) => (
 
@@ -320,7 +321,7 @@ export const Footer = () => {
 
             <p className="text-white/80 text-sm box-border caret-transparent mt-1">
 
-              Serving {citiesLabel()} & {business.region}
+              Serving {citiesLabel()} and surrounding areas
 
             </p>
 

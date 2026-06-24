@@ -4,10 +4,10 @@ export const HeroText = () => {
   return (
     <>
       <h1 className="text-white text-[28px] font-bold box-border caret-transparent leading-[36px] mb-3 md:text-[68px] md:leading-[88.4px]">
-        Exterior Cleaning & Lawn Care Specialists in {citiesLabel()}
+        Exterior Cleaning Specialists in {citiesLabel()}
       </h1>
       <p className="text-slate-200 text-[15px] leading-7 box-border caret-transparent max-w-full mx-auto md:max-w-[70%] mb-4 md:mb-8">
-        From driveway and patio cleaning to roof moss removal, gutter clearing, soft wash and lawn care, {brandName()} handles the exterior jobs that keep properties across {business.region} clean, safe and well maintained.
+        From driveway and patio cleaning to roof moss removal, gutter clearing and soft wash, {brandName()} handles the exterior jobs that keep properties across {business.region} clean, safe and well maintained.
       </p>
     </>
   );

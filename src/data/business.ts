@@ -2,7 +2,7 @@ export const business = {
   businessName: "Dirty Deeds Exterior Maintenance",
   alternateName: "Dirty Deeds",
   tagline:
-    "Professional exterior cleaning specialist — driveways, patios, gutters, house washing, grass cutting, lawn care and garden maintenance across Ayrshire.",
+    "Professional exterior cleaning specialist — driveways, patios, gutters, house washing and roof cleaning across Ayrshire.",
   gbpCategory: "Home Improvement",
   phone: "+44 7894 663151",
   phoneDisplay: "+44 7894 663151",
@@ -54,8 +54,6 @@ export const business = {
     "Gutter clearing",
     "Fascia and soffit cleaning",
     "Biocide treatments",
-    "Grass cutting",
-    "Lawn care and garden maintenance",
   ],
   openingHours: [
     {
@@ -78,14 +76,13 @@ export const business = {
 
 export const brandName = () => business.alternateName;
 export const fullBusinessName = () => business.businessName;
-export const citiesLabel = () =>
-  `${business.primaryCity} & ${business.secondaryCity}`;
+export const citiesLabel = () => business.region;
 
 export const homepageTitle = () =>
   `${business.businessName} | Exterior Cleaning in ${citiesLabel()}`;
 
 export const homepageDescription = () =>
-  `${business.alternateName} provides driveway cleaning, roof cleaning, patio cleaning, gutter clearing and lawn care in ${citiesLabel()} and across ${business.region}. Fully insured. Free quotes.`;
+  `${business.alternateName} provides driveway cleaning, roof cleaning, patio cleaning, gutter clearing and soft wash in ${citiesLabel()}. Fully insured. Free quotes.`;
 
 export const absoluteUrl = (path = ""): string => {
   if (!path) return `${business.siteUrl}/`;

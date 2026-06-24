@@ -13,7 +13,7 @@ const reviewSchema = {
   "@id": `${canonical}#webpage`,
   "url": canonical,
   "name": `Customer Reviews | ${brandName()}`,
-  "description": `Read customer reviews for ${brandName()} driveway cleaning, patio cleaning, roof moss removal, gutter clearing and lawn care across ${citiesLabel()} and ${business.region}.`,
+  "description": `Read customer reviews for ${brandName()} driveway cleaning, patio cleaning, roof moss removal and gutter clearing across ${citiesLabel()}.`,
   "isPartOf": { "@id": `${business.siteUrl}/#website` },
   "about": { "@id": `${business.siteUrl}/#business` },
   "mainEntity": reviews.map((review) => ({
@@ -55,7 +55,7 @@ const breadcrumbSchema = {
 
 <BaseLayout
   title={`Customer Reviews | ${brandName()} ${citiesLabel()}`}
-  description={`Read customer reviews for ${brandName()} driveway cleaning, patio cleaning, roof moss removal, gutter clearing and lawn care across ${citiesLabel()} and ${business.region}.`}
+  description={`Read customer reviews for ${brandName()} driveway cleaning, patio cleaning, roof moss removal and gutter clearing across ${citiesLabel()}.`}
   canonical={canonical}
 >
   <div class="text-neutral-600 text-lg not-italic normal-nums font-medium accent-auto bg-[#323232] box-border caret-transparent block tracking-[normal] leading-[27px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-manrope">
@@ -68,7 +68,7 @@ const breadcrumbSchema = {
             Customer Reviews
           </h1>
           <p class="text-slate-200 box-border caret-transparent max-w-[760px] mx-auto">
-            Customers recommend {brandName()} for reliable driveway cleaning, patio cleaning, roof moss removal, gutter clearing and lawn care across {citiesLabel()} and {business.region}.
+            Customers recommend {brandName()} for reliable driveway cleaning, patio cleaning, roof moss removal and gutter clearing across {citiesLabel()}.
           </p>
           <div class="box-border caret-transparent flex items-center justify-center gap-x-1 mt-6" aria-label="5 star customer rating">
             {[1, 2, 3, 4, 5].map((i) => (

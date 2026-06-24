@@ -6,7 +6,7 @@ export const ExperienceImage = () => {
       <div className="relative w-full">
         <img
           src={business.assets.about}
-          alt={`${brandName()} exterior cleaning and lawn care work across ${business.region}`}
+          alt={`${brandName()} exterior cleaning work across ${business.region}`}
           className="box-border caret-transparent inline-block max-w-full w-full h-auto object-contain rounded-[20px]"
         />
         <div 

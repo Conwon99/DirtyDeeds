@@ -15,7 +15,7 @@ const aboutSchema = {
   "@id": `${canonical}#webpage`,
   url: canonical,
   name: `About ${brandName()} | ${citiesLabel()} Exterior Cleaning Specialists`,
-  description: `Meet ${brandName()} — professional exterior cleaning and lawn maintenance specialists serving ${citiesLabel()} and ${business.region}.`,
+  description: `Meet ${brandName()} — professional exterior cleaning specialists serving ${citiesLabel()}.`,
   isPartOf: { "@id": `${business.siteUrl}/#website` },
   about: { "@id": `${business.siteUrl}/#business` },
   inLanguage: "en-GB",
@@ -32,7 +32,7 @@ const breadcrumbSchema = {
 
 <BaseLayout
   title={`About ${brandName()} | ${citiesLabel()} Exterior Cleaning Specialists`}
-  description={`Meet ${brandName()}. Professional exterior cleaning and lawn maintenance serving ${citiesLabel()} and ${business.region}. Fully insured. Free quotes available.`}
+  description={`Meet ${brandName()}. Professional exterior cleaning serving ${citiesLabel()}. Fully insured. Free quotes available.`}
   canonical={canonical}
 >
   <div class="text-neutral-600 text-lg not-italic normal-nums font-medium accent-auto bg-[#323232] box-border caret-transparent block tracking-[normal] leading-[27px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-manrope">
@@ -60,19 +60,19 @@ const breadcrumbSchema = {
           <div class="bg-white rounded-[20px] p-6 md:p-10 space-y-10">
             <div>
               <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">How {brandName()} Got Started</h2>
-              <p class="text-gray-700 leading-7">{brandName()} is a professional exterior cleaning specialist based in Rankinston, serving {business.region}. Driveways, patios, gutters, house washing, grass cutting, lawn care and garden maintenance — fully insured, reliable and offering free quotes. Jake and Martin built the business around practical exterior work that protects properties, improves kerb appeal and saves customers money on costly repairs down the line.</p>
+              <p class="text-gray-700 leading-7">{brandName()} is a professional exterior cleaning specialist based in Rankinston, serving {business.region}. Driveways, patios, gutters, house washing and roof cleaning — fully insured, reliable and offering free quotes. Jake built the business around practical exterior work that protects properties, improves kerb appeal and saves customers money on costly repairs down the line.</p>
             </div>
 
             <div>
               <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Meet the Team</h2>
               <div class="flex flex-col md:flex-row gap-6 items-start">
                 <div class="w-32 h-32 rounded-full bg-gray-200 shrink-0 overflow-hidden">
-                  <img src={business.assets.about} alt={`Jake and Martin from ${brandName()} at work in ${business.region}`} width="128" height="128" class="w-full h-full object-cover" loading="lazy" />
+                  <img src={business.assets.about} alt={`Jake from ${brandName()} at work in ${business.region}`} width="128" height="128" class="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div>
-                  <h3 class="text-gray-900 text-xl font-bold mb-1">Jake & Martin — {brandName()}</h3>
-                  <p class="text-gray-600 text-sm mb-3">Owners & Exterior Cleaning Specialists</p>
-                  <p class="text-gray-700 leading-7">Jake and Martin lead {brandName()} with a focus on reliable driveway, patio and roof cleaning, gutter clearing, biocide treatments and lawn care. Customers across {business.region} recommend the team for thorough results, fair pricing and friendly communication on every job.</p>
+                  <h3 class="text-gray-900 text-xl font-bold mb-1">Jake — {brandName()}</h3>
+                  <p class="text-gray-600 text-sm mb-3">Owner & Exterior Cleaning Specialist</p>
+                  <p class="text-gray-700 leading-7">Jake leads {brandName()} with a focus on reliable driveway, patio and roof cleaning, gutter clearing and biocide treatments. Customers across {business.region} recommend the team for thorough results, fair pricing and friendly communication on every job.</p>
                 </div>
               </div>
             </div>
@@ -80,13 +80,13 @@ const breadcrumbSchema = {
             <div>
               <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Video Introduction</h2>
               <div class="rounded-xl bg-gray-100 border border-gray-200 p-8 text-center text-gray-500">
-                <p>Watch Jake and Martin introduce {brandName()} — video embed placeholder</p>
+                <p>Watch Jake introduce {brandName()} — video embed placeholder</p>
               </div>
             </div>
 
             <div>
               <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Proudly Serving {citiesLabel()} and Surrounding Areas</h2>
-              <p class="text-gray-700 leading-7 mb-4">{brandName()} covers exterior cleaning, roof moss removal, gutter clearing and lawn care across {business.region}. <a href="/locations" class="text-[#16a34a] hover:underline font-medium">View all service areas</a>.</p>
+              <p class="text-gray-700 leading-7 mb-4">{brandName()} covers exterior cleaning, roof moss removal and gutter clearing across {business.region}. <a href="/locations" class="text-[#16a34a] hover:underline font-medium">View all service areas</a>.</p>
               <div class="grid grid-cols-2 gap-2 md:grid-cols-3">
                 {locations.map((location) => (
                   <a href={`/locations/${location.slug}`} class="text-[#16a34a] hover:underline text-sm">{location.name}</a>
@@ -97,7 +97,7 @@ const breadcrumbSchema = {
             <div>
               <h2 class="text-gray-900 text-2xl font-bold mb-4 md:text-3xl">Licensed, Insured, and Guaranteed</h2>
               <ul class="text-gray-700 space-y-2 list-disc pl-5">
-                <li>Free quotes on all exterior and lawn care work</li>
+                <li>Free quotes on all exterior cleaning work</li>
                 <li>Professional equipment and biocide treatments where needed</li>
                 <li>Trusted by customers across {citiesLabel()} and {business.region}</li>
                 <li>Fully insured — reliable local service</li>

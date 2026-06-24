@@ -101,38 +101,6 @@ const categoryConfigs: CategoryContentConfig[] = [
       },
     ],
   },
-  {
-    slug: "lawn-garden-care-ayr-kilmarnock",
-    serviceName: "Lawn & Garden Care",
-    serviceNameLower: "lawn and garden care",
-    titleSuffix: "Lawn & Garden Care",
-    contractorPhrase: "garden maintenance contractor",
-    nearMePhrase: "grass cutting near me",
-    metaTemplate: (displayName) =>
-      truncateMeta(
-        `Grass cutting and lawn care in ${displayName} by ${brandName()}. Garden maintenance across ${business.region}. Reliable local service. Free quotes.`,
-      ),
-    introTemplate: (town) =>
-      `${brandName()} provides grass cutting, lawn care and garden maintenance in ${town}. Reliable, fully insured service to keep gardens tidy alongside our exterior cleaning work.`,
-    localTemplate: (town, nearby) =>
-      `Gardens in ${town} need regular attention through the growing season. If you are searching for grass cutting near ${town} or garden maintenance in ${town}, ${brandName()} covers ${town} and nearby areas including ${nearby.slice(0, 3).join(", ") || "surrounding towns"}.`,
-    bodyTemplate: (town) =>
-      `${brandName()} helps customers in ${town} keep lawns and gardens presentable with grass cutting and garden maintenance. Book alongside driveway or patio cleaning for one visit from a local Ayrshire team. Contact ${brandName()} for a free quote on lawn and garden care in ${town}.`,
-    faqTemplates: (town) => [
-      {
-        question: `Do you offer grass cutting in ${town}?`,
-        answer: `Yes. ${brandName()} provides grass cutting and lawn care in ${town} and nearby areas. Get in touch to discuss frequency and arrange a free quote.`,
-      },
-      {
-        question: `Can you maintain gardens in ${town}?`,
-        answer: `Yes. Garden maintenance and lawn care are available in ${town}. ${brandName()} also provides exterior cleaning so you can book multiple services with one local team.`,
-      },
-      {
-        question: `How do I book lawn care in ${town}?`,
-        answer: `Contact ${brandName()} by phone, WhatsApp or the contact form with your location in ${town} and the garden work required. Free quotes are available.`,
-      },
-    ],
-  },
 ];
 
 const buildLocationServicePage = (

@@ -8,7 +8,7 @@ export type FaqItem = {
 export const homepageFaqs: FaqItem[] = [
   {
     question: "Do you offer free quotes?",
-    answer: `Yes. Contact ${brandName()} by phone, WhatsApp or message with details of your driveway, roof, patio or garden work and we can arrange a free, no-obligation quote.`,
+    answer: `Yes. Contact ${brandName()} by phone, WhatsApp or message with details of your driveway, roof or patio work and we can arrange a free, no-obligation quote.`,
   },
   {
     question: "What areas do you cover?",
@@ -16,7 +16,7 @@ export const homepageFaqs: FaqItem[] = [
   },
   {
     question: "What exterior cleaning services do you provide?",
-    answer: `${brandName()} provides driveway cleaning, patio and path cleaning, decking cleaning, soft wash house washing, roof cleaning and moss removal, gutter clearing, fascia and soffit cleaning, biocide treatments, grass cutting and lawn care.`,
+    answer: `${brandName()} provides driveway cleaning, patio and path cleaning, decking cleaning, soft wash house washing, roof cleaning and moss removal, gutter clearing, fascia and soffit cleaning and biocide treatments.`,
   },
   {
     question: "How do I get started?",

@@ -11,7 +11,7 @@ export const CTASection = () => {
             Get a free quote today
           </h2>
           <p className="text-gray-200 box-border caret-transparent max-w-md mb-2.5">
-            Get your free quote today for driveway cleaning, patio cleaning, roof moss removal, gutter clearing, soft wash, biocide treatments or lawn care across {citiesLabel()} and {business.region}.
+            Get your free quote today for driveway cleaning, patio cleaning, roof moss removal, gutter clearing, soft wash and biocide treatments across {citiesLabel()}.
           </p>
           <div className="flex flex-col items-center gap-4 w-full max-w-2xl">
             <a href="/contact"

@@ -36,7 +36,7 @@ export const projects: ProjectPage[] = [
     title: "Driveway & Path Restoration in Doonfoot, Ayr",
     description: `Driveway and path cleaning in Doonfoot, Ayr by ${brandName()}. Moss, weeds and organic growth removed with biocide treatment. Free Ayrshire quotes.`,
     intro: `A property in Doonfoot, Ayr needed driveway, pathway and patio areas cleaned after years of moss, weeds and organic growth. ${brandName()} restored the paving to a much higher standard.`,
-    details: `Martin and the team deep cleaned the driveway and paths with professional pressure washing equipment. Weeds were removed, surfaces were rinsed down and a full biocide treatment was applied to help prevent regrowth. The paving is now cleaner and brighter, dramatically improving the appearance of the property. ${brandName()} covers Doonfoot, Ayr and surrounding Ayrshire areas with summer offers available on driveway and patio packages.`,
+    details: `The team deep cleaned the driveway and paths with professional pressure washing equipment. Weeds were removed, surfaces were rinsed down and a full biocide treatment was applied to help prevent regrowth. The paving is now cleaner and brighter, dramatically improving the appearance of the property. ${brandName()} covers Doonfoot, Ayr and surrounding Ayrshire areas with summer offers available on driveway and patio packages.`,
     highlights: [
       "Driveway, paths and patio areas cleaned",
       "Moss, weeds and organic growth removed",

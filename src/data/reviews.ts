@@ -17,7 +17,7 @@ export const reviews: CustomerReview[] = [
     time: "recommended",
     initial: "X",
     initialBg: "bg-green-600",
-    text: "Very impressed with the work done to my home roof all clean and treated, gutters replaced, driveway all cleaned. Highly recommended these guys — great contact as well. Thanks again Jake and Martin.",
+    text: "Very impressed with the work done to my home roof all clean and treated, gutters replaced, driveway all cleaned. Highly recommended these guys — great contact as well. Thanks again Jake.",
   },
   {
     name: "Stephanie Murphy",

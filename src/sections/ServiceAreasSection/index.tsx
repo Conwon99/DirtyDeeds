@@ -17,8 +17,7 @@ export const ServiceAreasSection = () => {
             Areas We Cover
           </h2>
           <p className="text-[15px] text-neutral-700 leading-6 md:text-base max-w-[700px]">
-            {brandName()} provides driveway cleaning, patio cleaning, roof moss removal, gutter clearing, soft wash and lawn care across {citiesLabel()},
-            {` ${business.region}`} and surrounding areas. Select your area below or{" "}
+            {brandName()} provides driveway cleaning, patio cleaning, roof moss removal, gutter clearing and soft wash across {citiesLabel()} and surrounding areas. Select your area below or{" "}
             <a href="/locations" className="text-[#16a34a] hover:underline font-medium">
               view all service areas
             </a>

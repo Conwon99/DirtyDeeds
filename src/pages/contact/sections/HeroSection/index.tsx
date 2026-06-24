@@ -11,7 +11,7 @@ export const HeroSection = () => {
             Get a Free Quote from {brandName()}
           </h1>
           <p className="text-gray-200 box-border caret-transparent mb-2.5">
-            Contact us for driveway cleaning, patio cleaning, roof moss removal, gutter clearing, soft wash and lawn care quotes across {citiesLabel()} and {business.region}.
+            Contact us for driveway cleaning, patio cleaning, roof moss removal, gutter clearing and soft wash quotes across {citiesLabel()}.
           </p>
         </div>
         <ContactFormSection />

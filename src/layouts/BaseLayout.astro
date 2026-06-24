@@ -17,7 +17,7 @@ interface Props {
 
 const { title, description, canonical, keywords, ogImage, robots } = Astro.props;
 const defaultDescription = homepageDescription();
-const defaultKeywords = `driveway cleaning ${business.primaryCity}, roof cleaning ${business.secondaryCity}, patio cleaning ${business.region}, gutter clearing, exterior cleaning, grass cutting, ${business.alternateName} ${business.primaryCity}`;
+const defaultKeywords = `driveway cleaning ${business.region}, roof cleaning ${business.region}, patio cleaning ${business.region}, gutter clearing, exterior cleaning, ${business.alternateName} ${business.region}`;
 const siteUrl = business.siteUrl;
 const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).toString();
 const defaultOgImage = ogImage || `${siteUrl}${business.assets.hero}`;

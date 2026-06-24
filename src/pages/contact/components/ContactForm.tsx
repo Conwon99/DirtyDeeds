@@ -140,7 +140,7 @@ export const ContactForm = () => {
         </label>
         <textarea
           name="message"
-          placeholder="Tell us about your driveway, patio, roof, gutter or lawn care enquiry..."
+          placeholder="Tell us about your driveway, patio, roof or gutter enquiry..."
           rows={6}
           required
           className="text-gray-900 text-base bg-white box-border caret-transparent block leading-[25.6px] align-middle w-full border-2 border-white mb-2.5 px-5 py-2.5 rounded-[20px] border-solid resize-vertical focus:outline-none focus:ring-2 focus:ring-white focus:border-white"
