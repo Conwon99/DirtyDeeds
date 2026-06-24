@@ -10,7 +10,7 @@ export const business = {
   trackingPhone: "+44 7445 115491",
   trackingPhoneLocal: "07445 115491",
   email: "hello@dirtydeedsexteriormaintenance.co.uk",
-  siteUrl: "https://www.dirtydeedsexteriormaintenance.co.uk",
+  siteUrl: "https://dirtydeedsayrshire.co.uk",
   facebookUrl: "https://www.facebook.com/profile.php?id=100090370285579",
   googleMapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Dirty+Deeds+Exterior+Maintenance+Rankinston+Ayrshire",
