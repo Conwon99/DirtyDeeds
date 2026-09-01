@@ -309,9 +309,9 @@ const howItWorksSteps = [
           <h2 class="text-white text-2xl font-bold box-border caret-transparent leading-[30px] mb-8 text-center md:text-4xl md:leading-[43.2px]">
             Recent Roof Cleaning Work
           </h2>
-          <div class="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-5">
+          <div class="flex overflow-x-auto snap-x snap-mandatory gap-3 -mx-[15px] px-[15px] md:grid md:grid-cols-4 md:gap-5 md:overflow-visible md:mx-0 md:px-0">
             {roofGalleryImages.map((src) => (
-              <div class="relative overflow-hidden rounded-[16px]" style="aspect-ratio: 4/3">
+              <div class="relative overflow-hidden rounded-[16px] w-full shrink-0 snap-center md:w-auto md:shrink" style="aspect-ratio: 4/3">
                 <img
                   src={src}
                   alt={`Roof cleaning and moss removal before and after by ${brandName()} in ${citiesLabel()}`}
