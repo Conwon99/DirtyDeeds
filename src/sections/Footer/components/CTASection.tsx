@@ -2,7 +2,11 @@
 import { PhoneLink } from "@/components/PhoneLink";
 import { brandName, business, citiesLabel } from "@/data/business";
 
-export const CTASection = () => {
+type CTASectionProps = {
+  showPhone?: boolean;
+};
+
+export const CTASection = ({ showPhone = true }: CTASectionProps) => {
   return (
     <section className="box-border caret-transparent pt-[60px] pb-[50px] md:pt-[130px] md:pb-[70px]">
       <div className="relative bg-gray-800 box-border caret-transparent mx-[15px] pb-2.5 px-2.5 rounded-[20px] md:mx-[30px] md:pb-5 md:px-5">
@@ -19,14 +23,16 @@ export const CTASection = () => {
             >
               Get a Free Quote
             </a>
-            <PhoneLink
-              variant="default"
-              iconSrc="https://c.animaapp.com/mhooxuovKXaEfR/assets/670f86de88858acaf330ddd9_phone.svg"
-              iconAlt={`Call ${brandName()}`}
-              className="text-white text-lg font-semibold bg-[#c2410c] box-border caret-transparent inline-flex items-center justify-center gap-x-3 text-center border border-[#c2410c] px-8 py-4 rounded-[50px] border-solid md:text-xl md:leading-[28px] md:px-12 md:py-6 hover:bg-[#ea580c] hover:decoration-transparent transition-colors duration-300 min-h-[64px] md:min-h-[80px] w-full"
-              displayClassName="text-white text-lg font-semibold md:text-xl"
-              showIcon={true}
-            />
+            {showPhone && (
+              <PhoneLink
+                variant="default"
+                iconSrc="https://c.animaapp.com/mhooxuovKXaEfR/assets/670f86de88858acaf330ddd9_phone.svg"
+                iconAlt={`Call ${brandName()}`}
+                className="text-white text-lg font-semibold bg-[#c2410c] box-border caret-transparent inline-flex items-center justify-center gap-x-3 text-center border border-[#c2410c] px-8 py-4 rounded-[50px] border-solid md:text-xl md:leading-[28px] md:px-12 md:py-6 hover:bg-[#ea580c] hover:decoration-transparent transition-colors duration-300 min-h-[64px] md:min-h-[80px] w-full"
+                displayClassName="text-white text-lg font-semibold md:text-xl"
+                showIcon={true}
+              />
+            )}
           </div>
         </div>
       </div>

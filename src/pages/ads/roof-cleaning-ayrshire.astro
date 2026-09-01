@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { AdHeader } from "@/sections/Header/components/AdHeader";
-import { TrackedTelLink } from "@/components/TrackedTelLink";
 import { RatingDisplay } from "@/sections/ExperienceSection/components/RatingDisplay";
 import { ExperienceImage } from "@/sections/ExperienceSection/components/ExperienceImage";
 import { CTASection } from "@/sections/Footer/components/CTASection";
@@ -72,13 +71,6 @@ const howItWorksSteps = [
                 <svg class="h-5 w-5 md:h-6 md:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 Get a Free Quote
               </a>
-              <TrackedTelLink
-                client:load
-                showPhoneNumber
-                prefix="Call "
-                trackingLocation="ad-hero"
-                className="text-white text-base box-border caret-transparent font-bold border border-white/70 px-8 py-4 rounded-[50px] hover:bg-white hover:text-[#c2410c] transition-colors"
-              />
             </div>
             <div class="flex justify-center mt-8">
               <RatingDisplay client:load />
@@ -117,7 +109,7 @@ const howItWorksSteps = [
                 href="/contact"
                 class="text-white text-sm bg-[#c2410c] box-border caret-transparent inline-block leading-[19.6px] text-center border border-[#c2410c] px-5 py-2 rounded-[50px] border-solid md:text-lg md:leading-[25.2px] md:px-[30px] md:py-3 hover:bg-[#ea580c] hover:decoration-transparent transition-colors duration-300"
               >
-                Contact us
+                Get a Free Quote
               </a>
               <div class="box-border caret-transparent mt-8 md:mt-10">
                 <RatingDisplay client:load />
@@ -243,7 +235,7 @@ const howItWorksSteps = [
         </div>
       </section>
 
-      <CTASection client:load />
+      <CTASection client:load showPhone={false} />
     </main>
   </div>
 </BaseLayout>
