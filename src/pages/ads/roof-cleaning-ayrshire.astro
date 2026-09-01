@@ -23,14 +23,14 @@ const heroBenefitTicks = ["Safe Method", "Fully Insured", "Free Quotes"];
 // Icon shapes sourced verbatim from lucide-react (node_modules/lucide-react/dist/esm/icons) for accuracy.
 const whyChooseUsPoints = [
   {
-    text: "Free, no-obligation quotes — no pressure, no obligation",
+    text: "Free Quotes",
     icon: [
       { tag: "path", d: "M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" },
       { tag: "circle", cx: "7.5", cy: "7.5", r: ".5", fill: "currentColor" },
     ],
   },
   {
-    text: "Safe scrape-and-biocide method — no harsh pressure washing on tiles",
+    text: "Safe Scrape Method",
     icon: [
       { tag: "path", d: "M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" },
       { tag: "path", d: "M20 3v4" },
@@ -40,21 +40,21 @@ const whyChooseUsPoints = [
     ],
   },
   {
-    text: "Fully insured, experienced local team",
+    text: "Fully Insured",
     icon: [
       { tag: "path", d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" },
       { tag: "path", d: "m9 12 2 2 4-4" },
     ],
   },
   {
-    text: "Gutter clearing & fascia cleaning available on the same visit",
+    text: "Gutter Clearing Included",
     icon: [
       { tag: "path", d: "M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" },
       { tag: "path", d: "M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" },
     ],
   },
   {
-    text: "Biocide treatment to help prevent moss and algae regrowth",
+    text: "Biocide Treatment",
     icon: [
       { tag: "path", d: "M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2" },
       { tag: "path", d: "M8.5 2h7" },
@@ -62,7 +62,7 @@ const whyChooseUsPoints = [
     ],
   },
   {
-    text: `Local specialist covering ${citiesLabel()} and surrounding towns`,
+    text: "Local Specialists",
     icon: [
       { tag: "path", d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" },
       { tag: "circle", cx: "12", cy: "10", r: "3" },
@@ -168,11 +168,11 @@ const howItWorksSteps = [
                 {brandName()} helps homeowners across {citiesLabel()} with safe roof cleaning, moss removal, gutter clearing and biocide treatment — reliable service and professional results, no harsh pressure washing on tiles.
               </p>
               <div class="box-border caret-transparent mb-5 md:mb-[50px]">
-                <ul class="text-white text-sm sm:text-base md:text-lg box-border caret-transparent list-none pl-0 space-y-2 md:space-y-3">
+                <ul class="box-border caret-transparent list-none pl-0 grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                   {whyChooseUsPoints.map((point) => (
                     <li class="flex items-center gap-3">
-                      <div class="flex items-center justify-center w-8 h-8 md:w-9 md:h-9 rounded-full bg-[#ea580c] flex-shrink-0">
-                        <svg class="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#ea580c] flex-shrink-0">
+                        <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           {point.icon.map((shape) => (
                             shape.tag === "circle" ? (
                               <circle cx={shape.cx} cy={shape.cy} r={shape.r} fill={shape.fill} />
@@ -184,7 +184,7 @@ const howItWorksSteps = [
                           ))}
                         </svg>
                       </div>
-                      <span class="text-white font-medium">{point.text}</span>
+                      <span class="text-white text-lg md:text-xl font-bold">{point.text}</span>
                     </li>
                   ))}
                 </ul>
