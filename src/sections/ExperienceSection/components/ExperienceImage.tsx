@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import { brandName, business } from "@/data/business";
 
-export const ExperienceImage = () => {
-  const images = business.assets.gallery;
+type ExperienceImageProps = {
+  images?: string[];
+  alt?: string;
+};
+
+export const ExperienceImage = ({ images = business.assets.gallery, alt }: ExperienceImageProps) => {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -19,7 +23,7 @@ export const ExperienceImage = () => {
           <img
             key={src}
             src={src}
-            alt={`${brandName()} exterior cleaning work across ${business.region}`}
+            alt={alt || `${brandName()} exterior cleaning work across ${business.region}`}
             className={`absolute inset-0 w-full h-full object-cover rounded-[20px] transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
           />
         ))}
