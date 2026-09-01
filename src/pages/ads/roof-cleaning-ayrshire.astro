@@ -2,7 +2,6 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { AdHeader } from "@/sections/Header/components/AdHeader";
 import { ReviewStats } from "@/sections/ReviewsSection/components/ReviewStats";
-import { ExperienceImage } from "@/sections/ExperienceSection/components/ExperienceImage";
 import { ContactFormSection } from "@/pages/contact/sections/HeroSection/components/ContactFormSection";
 import { FAQItem } from "@/pages/contact/sections/FAQSection/components/FAQItem";
 import { getCategoryBySlug, getServicesForCategory } from "@/data/categories";
@@ -15,7 +14,8 @@ const category = getCategoryBySlug("roof-cleaning-ayrshire")!;
 const includedServices = getServicesForCategory(category);
 const roofService = getServiceBySlug("roof-cleaning-moss-removal")!;
 const canonical = absoluteUrl("/ads/roof-cleaning-ayrshire");
-const absoluteImage = absoluteUrl(category.image);
+const heroImage = "/gal_11.jpg";
+const absoluteImage = absoluteUrl(heroImage);
 const roofGalleryImages = ["/gal_07.jpg", "/gal_08.jpg", "/gal_09.jpg", "/gal_10.jpg"];
 
 const heroBenefitTicks = ["Safe Method", "Fully Insured", "Free Quotes"];
@@ -82,7 +82,7 @@ const howItWorksSteps = [
     <main>
       <!-- Hero -->
       <section class="box-border caret-transparent pt-[96px] md:pt-[120px]">
-        <div class="relative bg-gray-900 bg-cover bg-center box-border caret-transparent mx-[15px] pt-[80px] pb-[90px] rounded-[20px] md:pt-[140px] md:pb-[170px] overflow-hidden" style={`background-image:url('${category.image}')`}>
+        <div class="relative bg-gray-900 bg-cover bg-center box-border caret-transparent mx-[15px] pt-[80px] pb-[90px] rounded-[20px] md:pt-[140px] md:pb-[170px] overflow-hidden" style={`background-image:url('${heroImage}')`}>
           <div class="absolute inset-0 bg-gradient-to-b from-gray-900/60 via-gray-900/70 to-gray-900/90"></div>
           <div class="relative z-10 box-border caret-transparent max-w-[900px] mx-auto px-[15px] md:px-[30px] text-center">
             <p class="text-[#ea580c] text-sm font-semibold uppercase tracking-[0.18em] mb-4">Roof Cleaning</p>
@@ -119,7 +119,16 @@ const howItWorksSteps = [
       <section class="box-border caret-transparent pt-[70px] md:pt-[140px]">
         <div class="box-border caret-transparent max-w-[1200px] mx-auto px-[15px] md:px-[30px]">
           <div class="box-border caret-transparent gap-x-[30px] grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] gap-y-[30px] md:gap-x-[70px] md:grid-cols-[1fr_1fr] md:gap-y-[70px]">
-            <ExperienceImage client:load images={roofGalleryImages} alt={`Roof cleaning and moss removal before and after by ${brandName()} in ${citiesLabel()}`} />
+            <div class="relative self-start box-border caret-transparent overflow-hidden rounded-[20px] w-full">
+              <div class="relative w-full" style="aspect-ratio: 4/3">
+                <img
+                  src={heroImage}
+                  alt={`${brandName()} roof cleaning technician at work on scaffolding in ${citiesLabel()}`}
+                  class="absolute inset-0 h-full w-full object-cover rounded-[20px]"
+                  loading="lazy"
+                />
+              </div>
+            </div>
             <div class="box-border caret-transparent">
               <h2 class="text-white text-3xl font-bold box-border caret-transparent leading-[38px] mb-2.5 sm:text-4xl sm:leading-[43.2px] md:text-[56px] md:leading-[67.2px]">
                 Why Choose {brandName()}?
@@ -245,6 +254,27 @@ const howItWorksSteps = [
                 <img src={service.iconUrl} alt={service.iconAlt} class="mx-auto mb-4 h-10 w-10" />
                 <h3 class="text-white text-lg font-bold mb-2">{service.shortTitle}</h3>
                 <p class="text-slate-300 text-sm">{service.cardDescription}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section class="box-border caret-transparent pt-[70px] md:pt-[110px]">
+        <div class="box-border caret-transparent max-w-[980px] mx-auto px-[15px] md:px-[30px]">
+          <h2 class="text-white text-2xl font-bold box-border caret-transparent leading-[30px] mb-8 text-center md:text-4xl md:leading-[43.2px]">
+            Recent Roof Cleaning Work
+          </h2>
+          <div class="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-5">
+            {roofGalleryImages.map((src) => (
+              <div class="relative overflow-hidden rounded-[16px]" style="aspect-ratio: 4/3">
+                <img
+                  src={src}
+                  alt={`Roof cleaning and moss removal before and after by ${brandName()} in ${citiesLabel()}`}
+                  class="absolute inset-0 h-full w-full object-cover"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>
