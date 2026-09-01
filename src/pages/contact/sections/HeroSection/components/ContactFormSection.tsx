@@ -1,12 +1,18 @@
 import { ContactForm } from "@/pages/contact/components/ContactForm";
 
-export const ContactFormSection = () => {
+type ContactFormSectionProps = {
+  showHeading?: boolean;
+};
+
+export const ContactFormSection = ({ showHeading = true }: ContactFormSectionProps) => {
   return (
     <div className="box-border caret-transparent mb-[50px] md:mb-[70px]">
       <div className="bg-[#c2410c] box-border caret-transparent p-4 sm:p-5 rounded-[20px] md:p-10 max-w-[800px] mx-auto border-2 border-[#c2410c] shadow-lg">
-        <h2 className="text-white text-lg font-bold box-border caret-transparent leading-[23.4px] mb-2.5 md:text-[22px] md:leading-[28.6px]">
-          We're here for all your exterior cleaning needs
-        </h2>
+        {showHeading && (
+          <h2 className="text-white text-lg font-bold box-border caret-transparent leading-[23.4px] mb-2.5 md:text-[22px] md:leading-[28.6px]">
+            We're here for all your exterior cleaning needs
+          </h2>
+        )}
         <div className="box-border caret-transparent mt-[30px] mb-[15px]">
           <ContactForm />
           <div
