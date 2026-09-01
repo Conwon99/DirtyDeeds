@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { trackFormStart } from "@/utils/analytics";
 import { business } from "@/data/business";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/mnjkjgnw";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xgaekokg";
 
 export const AdQuoteFormSection = () => {
   useEffect(() => {
