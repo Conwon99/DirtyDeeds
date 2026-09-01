@@ -3,11 +3,11 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { AdHeader } from "@/sections/Header/components/AdHeader";
 import { ReviewStats } from "@/sections/ReviewsSection/components/ReviewStats";
 import { AdQuoteFormSection } from "@/pages/ads/components/AdQuoteFormSection";
+import { AdServiceAreaMap } from "@/pages/ads/components/AdServiceAreaMap";
 import { FAQItem } from "@/pages/contact/sections/FAQSection/components/FAQItem";
 import { getCategoryBySlug } from "@/data/categories";
 import { getServiceBySlug } from "@/data/services";
 import { reviews } from "@/data/reviews";
-import { locations } from "@/data/locations";
 import { absoluteUrl, brandName, citiesLabel } from "@/data/business";
 
 const category = getCategoryBySlug("roof-cleaning-ayrshire")!;
@@ -18,28 +18,6 @@ const absoluteImage = absoluteUrl(heroImage);
 const roofGalleryImages = ["/gal_07.jpg", "/gal_08.jpg", "/gal_09.jpg", "/gal_10.jpg"];
 
 const heroBenefitTicks = ["Safe Method", "Fully Insured", "Free Quotes"];
-
-// Stylised (not survey-accurate) outline of the Ayrshire coastline for the service-area map.
-const ayrshireOutline = "100,20 140,15 190,30 230,50 250,90 240,130 255,170 235,210 245,250 220,290 190,330 150,360 110,380 80,360 60,320 40,280 55,240 35,200 50,160 30,120 45,80 70,40";
-
-// Approximate relative positions within the 300x420 map viewBox — illustrative, not to scale.
-const townMapPositions: Record<string, { x: number; y: number }> = {
-  kilwinning: { x: 95, y: 55 },
-  irvine: { x: 60, y: 90 },
-  stewarton: { x: 195, y: 70 },
-  troon: { x: 55, y: 140 },
-  kilmarnock: { x: 170, y: 155 },
-  galston: { x: 215, y: 165 },
-  prestwick: { x: 62, y: 190 },
-  ayr: { x: 75, y: 230 },
-  mauchline: { x: 180, y: 235 },
-  rankinston: { x: 140, y: 265 },
-  cumnock: { x: 210, y: 285 },
-  maybole: { x: 95, y: 305 },
-};
-const townMapPoints = locations
-  .filter((location) => townMapPositions[location.slug])
-  .map((location) => ({ name: location.name, ...townMapPositions[location.slug] }));
 
 // Icon shapes sourced verbatim from lucide-react (node_modules/lucide-react/dist/esm/icons) for accuracy.
 const whyChooseUsPoints = [
@@ -349,20 +327,8 @@ const howItWorksSteps = [
       <section class="box-border caret-transparent pt-[70px] md:pt-[110px]">
         <div class="box-border caret-transparent max-w-[900px] mx-auto px-[15px] md:px-[30px]">
           <div class="bg-white rounded-[20px] px-6 py-10 text-center md:px-10 md:py-14">
-            <h2 class="text-gray-900 text-2xl font-bold mb-2 md:text-3xl">Proudly Serving {citiesLabel()}</h2>
-            <p class="text-gray-500 text-sm mb-6">Illustrative coverage map — not to scale</p>
-            <div class="relative mx-auto w-full max-w-[360px]">
-              <svg viewBox="0 0 300 420" class="w-full h-auto" role="img" aria-label={`Map of ${brandName()} service area across ${citiesLabel()}`}>
-                <polygon points={ayrshireOutline} fill="#ea580c" fill-opacity="0.12" stroke="#ea580c" stroke-width="3" stroke-linejoin="round" />
-                {townMapPoints.map((town) => (
-                  <g>
-                    <title>{town.name}</title>
-                    <circle cx={town.x} cy={town.y} r="6" fill="#ea580c" stroke="white" stroke-width="2" />
-                    <text x={town.x} y={town.y - 11} text-anchor="middle" font-size="11" font-weight="700" fill="#374151">{town.name}</text>
-                  </g>
-                ))}
-              </svg>
-            </div>
+            <h2 class="text-gray-900 text-2xl font-bold mb-6 md:text-3xl">Proudly Serving {citiesLabel()}</h2>
+            <AdServiceAreaMap client:load />
           </div>
         </div>
       </section>
