@@ -7,7 +7,6 @@ const FORMSPREE_ENDPOINT = "https://formspree.io/f/xgaekokg";
 export const AdQuoteFormSection = () => {
   useEffect(() => {
     const form = document.querySelector('form[name="wf-form-Ad-Quote-Form"]') as HTMLFormElement;
-    const successMessage = document.querySelector('[aria-label="Ad Quote Form success"]') as HTMLElement;
     const errorMessage = document.querySelector('[aria-label="Ad Quote Form failure"]') as HTMLElement;
 
     if (form) {
@@ -27,7 +26,6 @@ export const AdQuoteFormSection = () => {
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
-        if (successMessage) successMessage.classList.add("hidden");
         if (errorMessage) errorMessage.classList.add("hidden");
 
         if (!form.checkValidity()) {
@@ -49,10 +47,7 @@ export const AdQuoteFormSection = () => {
 
           if (response.ok) {
             form.reset();
-            if (successMessage) {
-              successMessage.classList.remove("hidden");
-              successMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
-            }
+            window.location.href = "/ads/roof-cleaning-ayrshire/thank-you";
           } else {
             throw new Error("Form submission failed");
           }
@@ -150,17 +145,8 @@ export const AdQuoteFormSection = () => {
         <div className="box-border caret-transparent mt-[15px]">
           <div
             role="region"
-            aria-label="Ad Quote Form success"
-            className="text-white bg-[#c2410c] box-border caret-transparent hidden text-center p-[15px] rounded-[20px]"
-          >
-            <div className="box-border caret-transparent">
-              Thank you! Your submission has been received!
-            </div>
-          </div>
-          <div
-            role="region"
             aria-label="Ad Quote Form failure"
-            className="text-white bg-[#ea580c] box-border caret-transparent hidden text-center mt-2.5 p-[15px] rounded-[20px]"
+            className="text-white bg-[#ea580c] box-border caret-transparent hidden text-center p-[15px] rounded-[20px]"
           >
             <div className="box-border caret-transparent">
               Oops! Something went wrong while submitting the form.

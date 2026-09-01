@@ -1,0 +1,40 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { AdHeader } from "@/sections/Header/components/AdHeader";
+import { absoluteUrl, brandName, citiesLabel } from "@/data/business";
+
+const canonical = absoluteUrl("/ads/roof-cleaning-ayrshire/thank-you");
+---
+
+<BaseLayout
+  title={`Thanks for Your Enquiry | ${brandName()}`}
+  description={`Thanks for requesting a free roof cleaning quote from ${brandName()}. We'll be in touch soon.`}
+  canonical={canonical}
+  robots="noindex, nofollow"
+>
+  <div class="text-neutral-600 text-lg not-italic normal-nums font-medium accent-auto bg-[#111111] box-border caret-transparent block tracking-[normal] leading-[27px] list-outside list-disc min-h-screen pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-manrope">
+    <AdHeader client:load />
+    <main>
+      <section class="box-border caret-transparent pt-[140px] pb-[100px] md:pt-[180px] md:pb-[140px]">
+        <div class="box-border caret-transparent max-w-[640px] mx-auto px-[15px] md:px-[30px] text-center">
+          <div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#ea580c]">
+            <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+          <h1 class="text-white text-3xl font-bold box-border caret-transparent leading-9 mb-4 md:text-5xl md:leading-[57.6px]">
+            Thanks — Your Request Is In!
+          </h1>
+          <p class="text-slate-200 box-border caret-transparent mb-8 leading-relaxed">
+            We've received your roof cleaning enquiry and will be in touch shortly with your free, no-obligation quote. If your enquiry is urgent, feel free to give us a call in the meantime.
+          </p>
+          <div class="box-border caret-transparent flex flex-wrap items-center justify-center gap-4">
+            <a href="/" class="text-white text-base bg-[#c2410c] box-border caret-transparent leading-[22px] text-center font-bold border border-[#c2410c] px-8 py-4 rounded-[50px] border-solid hover:bg-[#ea580c] hover:border-[#ea580c] transition-colors">
+              Return Home
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</BaseLayout>
