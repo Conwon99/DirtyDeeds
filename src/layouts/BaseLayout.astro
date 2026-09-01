@@ -13,9 +13,10 @@ interface Props {
   keywords?: string;
   ogImage?: string;
   robots?: string;
+  stickyContactHref?: string;
 }
 
-const { title, description, canonical, keywords, ogImage, robots } = Astro.props;
+const { title, description, canonical, keywords, ogImage, robots, stickyContactHref } = Astro.props;
 const defaultDescription = homepageDescription();
 const defaultKeywords = `driveway cleaning ${business.region}, roof cleaning ${business.region}, patio cleaning ${business.region}, gutter clearing, exterior cleaning, ${business.alternateName} ${business.region}`;
 const siteUrl = business.siteUrl;
@@ -170,6 +171,6 @@ const websiteSchema = {
   </head>
   <body>
     <slot />
-    <MobileStickyContact client:load />
+    <MobileStickyContact client:load href={stickyContactHref} />
   </body>
 </html>

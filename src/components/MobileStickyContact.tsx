@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 
-export const MobileStickyContact = () => {
+type MobileStickyContactProps = {
+  href?: string;
+};
+
+export const MobileStickyContact = ({ href = "/contact" }: MobileStickyContactProps) => {
   const [isContactPage, setIsContactPage] = useState(false);
 
   useEffect(() => {
@@ -14,7 +18,7 @@ export const MobileStickyContact = () => {
     <div className="fixed bottom-6 right-6 z-[9999] md:hidden flex flex-col">
       {!isContactPage && (
         <a
-          href="/contact"
+          href={href}
           className="bg-[#c2410c] text-white font-bold w-16 h-16 rounded-full hover:bg-[#ea580c] transition-all duration-300 flex items-center justify-center touch-manipulation"
           aria-label="Send message"
         >

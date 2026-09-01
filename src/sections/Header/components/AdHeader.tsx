@@ -7,7 +7,7 @@ export const AdHeader = () => {
       <div className="relative items-center box-border caret-transparent gap-x-2 flex justify-between w-full max-w-[1204px] mx-auto px-4 py-3 md:px-5 md:py-4 lg:px-6">
         <Logo />
         <a
-          href="/contact"
+          href="#quote-form"
           onClick={() => trackQuoteButton("ad-header")}
           className="text-white items-center bg-[#c2410c] box-border caret-transparent flex justify-center px-4 py-2.5 rounded-[100px] border border-transparent md:px-6 md:py-3 hover:bg-[#ea580c] transition-colors whitespace-nowrap"
         >
