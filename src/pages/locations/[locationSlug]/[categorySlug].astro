@@ -11,6 +11,9 @@ import {
   type LocationServicePage,
 } from "@/data/locationServices";
 import { buildFaqSchema } from "@/data/faqs";
+import RoofHowItWorksSection from "@/components/roof/RoofHowItWorksSection.astro";
+import RoofReviewsSection from "@/components/roof/RoofReviewsSection.astro";
+import RoofGallerySection from "@/components/roof/RoofGallerySection.astro";
 import { absoluteUrl, brandName, business } from "@/data/business";
 
 export function getStaticPaths() {
@@ -149,6 +152,8 @@ const breadcrumbSchema = {
         </div>
       </section>
 
+      {page.categorySlug === "roof-cleaning-ayrshire" && <RoofHowItWorksSection />}
+
       <section class="box-border caret-transparent pt-[70px] md:pt-[120px]">
         <div class="box-border caret-transparent max-w-[1200px] mx-auto px-[15px] md:px-[30px]">
           <div class="bg-white box-border caret-transparent rounded-[20px] p-6 md:p-10">
@@ -186,6 +191,13 @@ const breadcrumbSchema = {
           </div>
         </div>
       </section>
+
+      {page.categorySlug === "roof-cleaning-ayrshire" && (
+        <>
+          <RoofReviewsSection />
+          <RoofGallerySection />
+        </>
+      )}
 
       <section class="box-border caret-transparent py-[70px] md:py-[100px]">
         <div class="box-border caret-transparent max-w-[980px] mx-auto px-[15px] md:px-[30px]">

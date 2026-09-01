@@ -7,6 +7,9 @@ import { categories, getServicesForCategory, type ServiceCategory } from "@/data
 import { locations } from "@/data/locations";
 import { getLocationServicePath } from "@/data/locationServices";
 import { TrackedTelLink } from "@/components/TrackedTelLink";
+import RoofHowItWorksSection from "@/components/roof/RoofHowItWorksSection.astro";
+import RoofReviewsSection from "@/components/roof/RoofReviewsSection.astro";
+import RoofGallerySection from "@/components/roof/RoofGallerySection.astro";
 import { absoluteUrl, brandName, business, citiesLabel } from "@/data/business";
 
 export function getStaticPaths() {
@@ -113,6 +116,14 @@ const breadcrumbSchema = {
           </div>
         </div>
       </section>
+
+      {category.slug === "roof-cleaning-ayrshire" && (
+        <>
+          <RoofHowItWorksSection />
+          <RoofReviewsSection />
+          <RoofGallerySection />
+        </>
+      )}
 
       <CTASection client:load />
     </main>

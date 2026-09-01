@@ -37,8 +37,8 @@ export const categories: ServiceCategory[] = [
     description: `Roof cleaning, moss removal, gutter clearing and fascia cleaning across ${business.region}. Scrape and biocide method. Fully insured. Free quotes.`,
     intro: `Moss, algae and lichen can affect roof appearance and long-term condition. ${brandName()} provides safe roof cleaning using manual moss removal and professional biocide treatment — no harsh pressure washing on tiles. Gutter clearing and fascia cleaning can be included.`,
     localParagraph: `Scottish weather means moss build-up is common on roofs across ${business.region}. ${brandName()} serves towns across ${business.region} with scrape-and-biocide roof cleaning, gutter clearing and treatments to help prevent regrowth.`,
-    image: "/gal_05.jpg",
-    imageAlt: "Roof cleaning and moss removal by Dirty Deeds in Ayrshire",
+    image: "/gal_11.jpg",
+    imageAlt: "Dirty Deeds roof cleaning technician at work on scaffolding in Ayrshire",
     serviceSlugs: [
       "roof-cleaning-moss-removal",
       "gutter-clearing-fascia-soffit",
