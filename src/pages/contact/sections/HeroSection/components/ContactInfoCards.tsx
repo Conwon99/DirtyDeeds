@@ -1,5 +1,5 @@
 import { ContactCard } from "@/pages/contact/sections/HeroSection/components/ContactCard";
-import { brandName, business, citiesLabel } from "@/data/business";
+import { brandName, business } from "@/data/business";
 
 export const ContactInfoCards = () => {
   return (
@@ -10,7 +10,7 @@ export const ContactInfoCards = () => {
         iconAlt={`Location icon - ${brandName()} service area`}
         title="Service Area"
         titleClassName="text-white text-xl font-bold box-border caret-transparent leading-6 mb-2.5 md:text-2xl md:leading-[28.8px]"
-        content={`${citiesLabel()}, ${business.region} and surrounding areas`}
+        content={`${business.region} and surrounding areas`}
         contentClassName="text-white box-border caret-transparent"
       />
       <ContactCard
