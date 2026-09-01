@@ -2,7 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { AdHeader } from "@/sections/Header/components/AdHeader";
 import { ReviewStats } from "@/sections/ReviewsSection/components/ReviewStats";
-import { ContactFormSection } from "@/pages/contact/sections/HeroSection/components/ContactFormSection";
+import { AdQuoteFormSection } from "@/pages/ads/components/AdQuoteFormSection";
 import { FAQItem } from "@/pages/contact/sections/FAQSection/components/FAQItem";
 import { getCategoryBySlug, getServicesForCategory } from "@/data/categories";
 import { getServiceBySlug } from "@/data/services";
@@ -386,7 +386,7 @@ const howItWorksSteps = [
             <ReviewStats client:load />
             <p class="text-white text-base md:text-lg font-semibold">Over 10+ years of 5 star service</p>
           </div>
-          <ContactFormSection client:load showHeading={false} />
+          <AdQuoteFormSection client:load />
         </div>
       </section>
     </main>
