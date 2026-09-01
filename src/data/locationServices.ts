@@ -17,6 +17,8 @@ export type LocationServicePage = {
   intro: string;
   localParagraph: string;
   bodyParagraph: string;
+  whyChooseUsIntro: string;
+  whyChooseUsPoints: string[];
   faqs: LocationServiceFaq[];
   location: LocationPage;
   category: ServiceCategory;
@@ -33,6 +35,8 @@ type CategoryContentConfig = {
   introTemplate: (town: string) => string;
   localTemplate: (town: string, nearby: string[]) => string;
   bodyTemplate: (town: string) => string;
+  whyChooseUsIntroTemplate: (town: string) => string;
+  whyChooseUsPointsTemplate: (town: string) => string[];
   faqTemplates: (town: string) => LocationServiceFaq[];
 };
 
@@ -54,6 +58,14 @@ const categoryConfigs: CategoryContentConfig[] = [
       `Driveways and patios in ${town} often build up moss, algae, weeds and grime over time. If you are searching for ${categoryConfigs[0].nearMePhrase} or an exterior cleaning contractor near ${town}, ${brandName()} covers ${town} and nearby areas including ${nearby.slice(0, 3).join(", ") || "surrounding towns"}.`,
     bodyTemplate: (town) =>
       `From block paving restoration to patio biocide treatments, ${brandName()} helps customers in ${town} restore kerb appeal without replacing surfaces. Deep pressure washing, weed removal and professional treatments are planned around the condition of your driveway, patio or decking. Contact ${brandName()} for a free quote on exterior cleaning in ${town}.`,
+    whyChooseUsIntroTemplate: (town) =>
+      `Homeowners in ${town} choose ${brandName()} for reliable, fully insured exterior cleaning backed by local knowledge of the moss, algae and weather conditions typical across ${business.region}.`,
+    whyChooseUsPointsTemplate: (town) => [
+      `Local exterior cleaning team covering ${town} and surrounding areas`,
+      "Fully insured driveway, patio and decking cleaning",
+      "Biocide treatments to help slow moss, algae and weed regrowth",
+      `Free, no-obligation quotes for ${town} properties`,
+    ],
     faqTemplates: (town) => [
       {
         question: `Do you provide driveway cleaning in ${town}?`,
@@ -86,6 +98,14 @@ const categoryConfigs: CategoryContentConfig[] = [
       `Moss and algae build-up is common on roofs in ${town} and across ${business.region}. If you need roof cleaning near ${town}, ${brandName()} serves ${town} and surrounding areas including ${nearby.slice(0, 3).join(", ") || "nearby towns"}. Gutters, fascia and soffits can be cleaned as part of a roof package.`,
     bodyTemplate: (town) =>
       `${brandName()} uses the scrape-and-biocide method for roof cleaning in ${town} — manual moss removal followed by biocide treatment to kill remaining spores and help prevent regrowth. Gutters are cleared of moss and debris. Contact ${brandName()} for a free roof cleaning quote in ${town}.`,
+    whyChooseUsIntroTemplate: (town) =>
+      `Homeowners in ${town} choose ${brandName()} for safe, effective roof cleaning that protects tiles and keeps gutters flowing through ${business.region}'s wet weather.`,
+    whyChooseUsPointsTemplate: (town) => [
+      "Safe scrape-and-biocide method — no harsh pressure washing on tiles",
+      `Local roof cleaning specialist serving ${town} and surrounding areas`,
+      "Gutter clearing and fascia cleaning available on the same visit",
+      `Fully insured with free quotes for ${town} homes`,
+    ],
     faqTemplates: (town) => [
       {
         question: `Do you offer roof cleaning in ${town}?`,
@@ -121,6 +141,8 @@ const buildLocationServicePage = (
     intro: config.introTemplate(town),
     localParagraph: config.localTemplate(town, nearbyNames),
     bodyParagraph: config.bodyTemplate(town),
+    whyChooseUsIntro: config.whyChooseUsIntroTemplate(town),
+    whyChooseUsPoints: config.whyChooseUsPointsTemplate(town),
     faqs: config.faqTemplates(town),
     location,
     category,

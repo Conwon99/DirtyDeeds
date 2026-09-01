@@ -120,6 +120,37 @@ const breadcrumbSchema = {
 
       <section class="box-border caret-transparent pt-[70px] md:pt-[120px]">
         <div class="box-border caret-transparent max-w-[1200px] mx-auto px-[15px] md:px-[30px]">
+          <div class="box-border caret-transparent gap-x-[30px] grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] gap-y-[30px] items-center md:gap-x-[50px] md:grid-cols-[1fr_1fr] md:gap-y-[50px]">
+            <div class="relative box-border caret-transparent overflow-hidden rounded-[20px] w-full" style="aspect-ratio: 4/3">
+              <img src={page.category.image} alt={page.category.imageAlt} class="absolute inset-0 h-full w-full object-cover rounded-[20px]" loading="lazy" />
+            </div>
+            <div class="box-border caret-transparent">
+              <h2 class="text-white text-3xl font-bold box-border caret-transparent leading-[38px] mb-2.5 sm:text-4xl sm:leading-[43.2px] md:text-[56px] md:leading-[67.2px]">
+                Why Choose {brandName()} in {page.location.name}?
+              </h2>
+              <p class="text-gray-200 text-sm sm:text-base box-border caret-transparent mt-2.5 mb-5 md:mt-5 md:mb-5 leading-relaxed">{page.whyChooseUsIntro}</p>
+              <ul class="text-white text-sm sm:text-base md:text-lg box-border caret-transparent list-none pl-0 space-y-2 md:space-y-3 mb-8">
+                {page.whyChooseUsPoints.map((point) => (
+                  <li class="flex items-center gap-3">
+                    <div class="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#ea580c] flex-shrink-0">
+                      <svg class="w-4 h-4 md:w-5 md:h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                    </div>
+                    <span class="text-white font-medium">{point}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href="/contact" class="text-white text-sm bg-[#c2410c] box-border caret-transparent inline-block leading-[19.6px] text-center border border-[#c2410c] px-5 py-2 rounded-[50px] border-solid md:text-lg md:leading-[25.2px] md:px-[30px] md:py-3 hover:bg-[#ea580c] hover:border-[#ea580c] transition-colors">
+                Get a Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="box-border caret-transparent pt-[70px] md:pt-[120px]">
+        <div class="box-border caret-transparent max-w-[1200px] mx-auto px-[15px] md:px-[30px]">
           <div class="bg-white box-border caret-transparent rounded-[20px] p-6 md:p-10">
             <h2 class="text-gray-900 text-[28px] font-bold box-border caret-transparent leading-[36px] mb-5 md:text-[44px] md:leading-[54px]">
               {page.category.name} Services in {page.location.name}
