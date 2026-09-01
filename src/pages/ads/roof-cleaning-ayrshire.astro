@@ -1,0 +1,118 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { AdHeader } from "@/sections/Header/components/AdHeader";
+import { RatingDisplay } from "@/sections/ExperienceSection/components/RatingDisplay";
+import { TrackedTelLink } from "@/components/TrackedTelLink";
+import { CTASection } from "@/sections/Footer/components/CTASection";
+import { Footer } from "@/sections/Footer";
+import { getCategoryBySlug, getServicesForCategory } from "@/data/categories";
+import { getServiceBySlug } from "@/data/services";
+import { absoluteUrl, brandName, business, citiesLabel } from "@/data/business";
+
+const category = getCategoryBySlug("roof-cleaning-ayrshire")!;
+const includedServices = getServicesForCategory(category);
+const roofService = getServiceBySlug("roof-cleaning-moss-removal")!;
+const canonical = absoluteUrl("/ads/roof-cleaning-ayrshire");
+const absoluteImage = absoluteUrl(category.image);
+---
+
+<BaseLayout
+  title={`Roof Cleaning & Moss Removal in ${citiesLabel()} | ${brandName()}`}
+  description={category.description}
+  canonical={canonical}
+  ogImage={absoluteImage}
+  robots="noindex, follow"
+>
+  <div class="text-neutral-600 text-lg not-italic normal-nums font-medium accent-auto bg-[#111111] box-border caret-transparent block tracking-[normal] leading-[27px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-manrope">
+    <AdHeader client:load />
+    <main>
+      <section class="box-border caret-transparent pt-[96px] md:pt-[120px]">
+        <div class="relative bg-gray-900 bg-cover bg-center box-border caret-transparent mx-[15px] pt-[80px] pb-[90px] rounded-[20px] md:pt-[140px] md:pb-[170px] overflow-hidden" style={`background-image:url('${category.image}')`}>
+          <div class="absolute inset-0 bg-gradient-to-b from-gray-900/60 via-gray-900/70 to-gray-900/90"></div>
+          <div class="relative z-10 box-border caret-transparent max-w-[900px] mx-auto px-[15px] md:px-[30px] text-center">
+            <p class="text-[#ea580c] text-sm font-semibold uppercase tracking-[0.18em] mb-4">Roof Cleaning</p>
+            <h1 class="text-white text-[34px] font-bold box-border caret-transparent leading-[44px] mb-5 md:text-[60px] md:leading-[70px]">
+              Roof Cleaning & Moss Removal in <span class="text-[#ea580c]">Ayrshire</span>
+            </h1>
+            <p class="text-slate-200 box-border caret-transparent max-w-[640px] mx-auto mb-8">{category.description}</p>
+            <div class="box-border caret-transparent flex flex-wrap items-center justify-center gap-4">
+              <a href="/contact" class="text-white text-base bg-[#c2410c] box-border caret-transparent leading-[22px] text-center font-bold border border-[#c2410c] px-8 py-4 rounded-[50px] border-solid md:text-lg md:leading-[25.2px] md:px-[36px] md:py-5 hover:bg-[#ea580c] hover:border-[#ea580c] transition-colors inline-flex items-center justify-center gap-3">
+                <svg class="h-5 w-5 md:h-6 md:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                Get a Free Quote
+              </a>
+              <TrackedTelLink
+                client:load
+                showPhoneNumber
+                prefix="Call "
+                trackingLocation="ad-hero"
+                className="text-white text-base box-border caret-transparent font-bold border border-white/70 px-8 py-4 rounded-[50px] hover:bg-white hover:text-[#c2410c] transition-colors"
+              />
+            </div>
+            <div class="flex justify-center mt-8">
+              <RatingDisplay client:load />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="box-border caret-transparent pt-[70px] md:pt-[110px]">
+        <div class="box-border caret-transparent max-w-[980px] mx-auto px-[15px] md:px-[30px]">
+          <div class="bg-white box-border caret-transparent rounded-[20px] p-6 md:p-10">
+            <h2 class="text-gray-900 text-[26px] font-bold box-border caret-transparent leading-[34px] mb-6 md:text-[38px] md:leading-[46px] text-center">
+              Why Choose {brandName()} for Roof Cleaning in {citiesLabel()}?
+            </h2>
+            <ul class="text-gray-900 text-base md:text-lg box-border caret-transparent list-none pl-0 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+              {roofService.benefits.map((benefit) => (
+                <li class="flex items-start gap-3">
+                  <div class="flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#ea580c] flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 md:w-5 md:h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <span class="text-gray-700 font-medium">{benefit}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="box-border caret-transparent pt-[70px] md:pt-[110px]">
+        <div class="box-border caret-transparent max-w-[980px] mx-auto px-[15px] md:px-[30px]">
+          <h2 class="text-white text-2xl font-bold box-border caret-transparent leading-[30px] mb-6 text-center md:text-4xl md:leading-[43.2px]">
+            What's Included
+          </h2>
+          <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+            {includedServices.map((service) => (
+              <div class="rounded-xl bg-neutral-900/75 border border-white/10 p-6">
+                <h3 class="text-white text-lg font-bold mb-2">{service.shortTitle}</h3>
+                <p class="text-slate-300 text-sm">{service.cardDescription}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="box-border caret-transparent py-[70px] md:py-[110px]">
+        <div class="box-border caret-transparent max-w-[980px] mx-auto px-[15px] md:px-[30px]">
+          <div class="box-border caret-transparent text-center mb-[30px] md:mb-[50px]">
+            <h2 class="text-white text-3xl font-bold box-border caret-transparent leading-[38px] mb-2.5 md:text-[48px] md:leading-[57.6px]">
+              Roof Cleaning FAQs
+            </h2>
+          </div>
+          <div class="items-start box-border caret-transparent gap-x-[30px] flex flex-col justify-start gap-y-[20px]">
+            {roofService.faq.map((item) => (
+              <article class="bg-white box-border caret-transparent rounded-[20px] p-6 w-full">
+                <h3 class="text-gray-900 text-xl font-bold box-border caret-transparent leading-[26px] mb-3">{item.question}</h3>
+                <p class="text-gray-700 box-border caret-transparent">{item.answer}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CTASection client:load />
+    </main>
+    <Footer client:load />
+  </div>
+</BaseLayout>
