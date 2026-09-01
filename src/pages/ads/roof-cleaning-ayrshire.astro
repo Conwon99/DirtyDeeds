@@ -243,27 +243,6 @@ const howItWorksSteps = [
         </div>
       </section>
 
-      <!-- Gallery -->
-      <section class="box-border caret-transparent pt-[70px] md:pt-[110px]">
-        <div class="box-border caret-transparent max-w-[980px] mx-auto px-[15px] md:px-[30px]">
-          <h2 class="text-white text-2xl font-bold box-border caret-transparent leading-[30px] mb-8 text-center md:text-4xl md:leading-[43.2px]">
-            Recent Roof Cleaning Work
-          </h2>
-          <div class="grid grid-cols-1 gap-3 md:grid-cols-4 md:gap-5">
-            {roofGalleryImages.map((src) => (
-              <div class="relative overflow-hidden rounded-[16px]" style="aspect-ratio: 4/3">
-                <img
-                  src={src}
-                  alt={`Roof cleaning and moss removal before and after by ${brandName()} in ${citiesLabel()}`}
-                  class="absolute inset-0 h-full w-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <!-- How it works -->
       <section class="box-border caret-transparent pt-[70px] md:pt-[110px]">
         <div class="box-border caret-transparent max-w-[900px] mx-auto px-[15px] md:px-[30px]">
@@ -339,6 +318,27 @@ const howItWorksSteps = [
                   </div>
                 </div>
                 <p class="text-gray-700 text-sm leading-6">{review.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section class="box-border caret-transparent pt-[70px] md:pt-[110px]">
+        <div class="box-border caret-transparent max-w-[980px] mx-auto px-[15px] md:px-[30px]">
+          <h2 class="text-white text-2xl font-bold box-border caret-transparent leading-[30px] mb-8 text-center md:text-4xl md:leading-[43.2px]">
+            Recent Roof Cleaning Work
+          </h2>
+          <div class="grid grid-cols-1 gap-3 md:grid-cols-4 md:gap-5">
+            {roofGalleryImages.map((src) => (
+              <div class="relative overflow-hidden rounded-[16px]" style="aspect-ratio: 4/3">
+                <img
+                  src={src}
+                  alt={`Roof cleaning and moss removal before and after by ${brandName()} in ${citiesLabel()}`}
+                  class="absolute inset-0 h-full w-full object-cover"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>
