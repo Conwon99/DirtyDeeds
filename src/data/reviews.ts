@@ -1,5 +1,5 @@
-/** Total reviews on Facebook — carousel shows a sample */
-export const TOTAL_REVIEW_COUNT = 9;
+/** Total reviews on Google */
+export const TOTAL_REVIEW_COUNT = 11;
 
 export type CustomerReview = {
   name: string;
@@ -12,35 +12,51 @@ export type CustomerReview = {
 
 export const reviews: CustomerReview[] = [
   {
-    name: "Xgill Xmcb",
-    meta: "Facebook review",
-    time: "recommended",
-    initial: "X",
+    name: "Angela Watson",
+    meta: "Google review",
+    time: "verified customer",
+    initial: "A",
     initialBg: "bg-orange-700",
-    text: "Very impressed with the work done to my home roof all clean and treated, gutters replaced, driveway all cleaned. Highly recommended these guys — great contact as well. Thanks again Jake.",
+    text: "Recently had roof moss removal, biocide treatment, gutter/fascia/sofit clean as well as render soft wash work undertaken by Jake, who kept me fully informed of the processes being undertaken. Jake was pleasant, helpful, considerate, and worked really well removing all debris, leaving the area clean and tidy. I am really happy with the work completed.",
   },
   {
-    name: "Stephanie Murphy",
-    meta: "Facebook review",
-    time: "recommended",
-    initial: "S",
-    initialBg: "bg-orange-500",
-    text: "Jake came and power washed, deep cleaned and re-sanded our driveway, AstroTurf and decking, made a fab job and good prices, highly recommend.",
-  },
-  {
-    name: "Janette Stewart",
-    meta: "Facebook review",
-    time: "recommended",
+    name: "James Harvey",
+    meta: "Google review",
+    time: "verified customer",
     initial: "J",
     initialBg: "bg-orange-600",
-    text: "I give Dirty Deeds a 5 star rating. After the first power wash clean, Jake followed up with a soft wash, including all areas, windows, doors and fencing. Every area was safely chemically treated to stop weeds coming back and is looking absolutely perfect. Many thanks.",
+    text: "By far the best service and job done. So professional and friendly, very reliable and first class work done. Would highly recommend them to anyone.",
   },
   {
-    name: "Lesley Tasker",
-    meta: "Facebook review",
-    time: "recommended",
+    name: "Ruby Stuart",
+    meta: "Google review",
+    time: "verified customer",
+    initial: "R",
+    initialBg: "bg-orange-500",
+    text: "Great worker, brilliant work done every time, amazing value for money & Jake is so kind and thoughtful and very thorough in every job.",
+  },
+  {
+    name: "Lindsay Mccrorie",
+    meta: "Google review",
+    time: "verified customer",
     initial: "L",
     initialBg: "bg-orange-400",
-    text: "Recently power washed my driveway — it now looks like new. Was amazed with results. Reliable, trustworthy, very pleasant and arrived on time. Would recommend this company.",
+    text: "Brilliant job done. On time. Value for money. Very friendly and professional. Always does a great job. Would also recommend.",
+  },
+  {
+    name: "Don Morrison",
+    meta: "Google review",
+    time: "verified customer",
+    initial: "D",
+    initialBg: "bg-orange-800",
+    text: "Great job of cleaning gutters. Very good price for an immaculate job. Pics before and after job complete. Cannot recommend highly enough.",
+  },
+  {
+    name: "Ashleigh Clelland",
+    meta: "Google review",
+    time: "verified customer",
+    initial: "A",
+    initialBg: "bg-orange-300",
+    text: "Great service, very helpful, would definitely recommend to everyone.",
   },
 ];
