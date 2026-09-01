@@ -14,7 +14,7 @@ export const ReviewStats = () => {
         </div>
         <div className="box-border caret-transparent">
           <div className="text-white text-lg font-bold box-border caret-transparent">
-            6+ 5 Star Reviews
+            11 5-Star Reviews
           </div>
           <div className="text-gray-300 text-sm box-border caret-transparent">
             from Facebook
@@ -42,7 +42,7 @@ export const ReviewStats = () => {
         </div>
         <div className="box-border caret-transparent">
           <div className="text-white text-lg font-bold box-border caret-transparent">
-            6+ Google reviews
+            11 5-Star Reviews
           </div>
           <div className="text-gray-300 text-sm box-border caret-transparent">
             from Google
