@@ -23,20 +23,16 @@ const heroBenefitTicks = ["Safe Method", "Fully Insured", "Free Quotes"];
 // Icon shapes sourced verbatim from lucide-react (node_modules/lucide-react/dist/esm/icons) for accuracy.
 const whyChooseUsPoints = [
   {
-    text: "Free Quotes",
+    text: "Over 22 5 Star Reviews",
     icon: [
-      { tag: "path", d: "M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" },
-      { tag: "circle", cx: "7.5", cy: "7.5", r: ".5", fill: "currentColor" },
+      { tag: "polygon", points: "12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2", fill: "currentColor" },
     ],
   },
   {
-    text: "Safe Scrape Method",
+    text: "Locally Trusted",
     icon: [
-      { tag: "path", d: "M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" },
-      { tag: "path", d: "M20 3v4" },
-      { tag: "path", d: "M22 5h-4" },
-      { tag: "path", d: "M4 17v2" },
-      { tag: "path", d: "M5 18H3" },
+      { tag: "path", d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" },
+      { tag: "circle", cx: "12", cy: "10", r: "3" },
     ],
   },
   {
@@ -47,25 +43,20 @@ const whyChooseUsPoints = [
     ],
   },
   {
-    text: "Gutter Clearing Included",
+    text: "Safe Techniques Used",
     icon: [
-      { tag: "path", d: "M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" },
-      { tag: "path", d: "M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" },
+      { tag: "path", d: "M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" },
+      { tag: "path", d: "M20 3v4" },
+      { tag: "path", d: "M22 5h-4" },
+      { tag: "path", d: "M4 17v2" },
+      { tag: "path", d: "M5 18H3" },
     ],
   },
   {
-    text: "Biocide Treatment",
+    text: "Free Quotes",
     icon: [
-      { tag: "path", d: "M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2" },
-      { tag: "path", d: "M8.5 2h7" },
-      { tag: "path", d: "M7 16h10" },
-    ],
-  },
-  {
-    text: "Local Specialists",
-    icon: [
-      { tag: "path", d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" },
-      { tag: "circle", cx: "12", cy: "10", r: "3" },
+      { tag: "path", d: "M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" },
+      { tag: "circle", cx: "7.5", cy: "7.5", r: ".5", fill: "currentColor" },
     ],
   },
 ];
@@ -178,6 +169,8 @@ const howItWorksSteps = [
                               <circle cx={shape.cx} cy={shape.cy} r={shape.r} fill={shape.fill} />
                             ) : shape.tag === "rect" ? (
                               <rect x={shape.x} y={shape.y} width={shape.width} height={shape.height} rx={shape.rx} ry={shape.ry} />
+                            ) : shape.tag === "polygon" ? (
+                              <polygon points={shape.points} fill={shape.fill} />
                             ) : (
                               <path d={shape.d} />
                             )
@@ -189,12 +182,14 @@ const howItWorksSteps = [
                   ))}
                 </ul>
               </div>
-              <a
-                href="#quote-form"
-                class="text-white text-sm bg-[#c2410c] box-border caret-transparent inline-block leading-[19.6px] text-center border border-[#c2410c] px-5 py-2 rounded-[50px] border-solid md:text-lg md:leading-[25.2px] md:px-[30px] md:py-3 hover:bg-[#ea580c] hover:decoration-transparent transition-colors duration-300"
-              >
-                Get a Free Quote
-              </a>
+              <div class="flex justify-center md:justify-start">
+                <a
+                  href="#quote-form"
+                  class="text-white text-base bg-[#c2410c] box-border caret-transparent inline-flex items-center justify-center leading-[22px] text-center font-bold border border-[#c2410c] px-8 py-4 rounded-[50px] border-solid md:text-lg md:leading-[25.2px] md:px-[36px] md:py-5 hover:bg-[#ea580c] hover:border-[#ea580c] transition-colors"
+                >
+                  Get a Free Quote
+                </a>
+              </div>
               <div class="box-border caret-transparent mt-8 md:mt-10">
                 <ReviewStats client:load />
               </div>
