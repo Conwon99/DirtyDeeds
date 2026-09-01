@@ -141,7 +141,7 @@ export const AdQuoteFormSection = () => {
           <input
             type="submit"
             value="Submit"
-            className="text-white text-base font-bold bg-[#c2410c] box-border caret-transparent leading-[24px] text-center text-nowrap w-full border-2 border-[#c2410c] px-6 py-3 rounded-[50px] border-solid md:text-xl md:leading-[28px] md:px-8 md:py-4 hover:bg-[#ea580c] hover:border-[#ea580c] transition-all duration-300 min-h-[56px] md:min-h-[64px] shadow-lg"
+            className="text-[#c2410c] text-base font-bold bg-white box-border caret-transparent leading-[24px] text-center text-nowrap w-full border-2 border-white px-6 py-3 rounded-[50px] border-solid md:text-xl md:leading-[28px] md:px-8 md:py-4 hover:bg-gray-100 transition-all duration-300 min-h-[56px] md:min-h-[64px] shadow-lg"
           />
         </form>
         <div className="box-border caret-transparent mt-[15px]">
