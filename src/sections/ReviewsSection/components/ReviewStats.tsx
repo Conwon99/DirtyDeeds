@@ -15,7 +15,7 @@ export const ReviewStats = () => {
         href="https://share.google/I5rodIQo9AWkx7xTp"
         target="_blank"
         rel="noopener noreferrer"
-        className="box-border caret-transparent flex items-center gap-3 p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors hover:decoration-transparent"
+        className="box-border caret-transparent flex items-center gap-3 p-4 bg-gray-800/70 backdrop-blur-sm rounded-lg hover:bg-gray-700/70 transition-colors hover:decoration-transparent"
       >
         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-white">
           <svg className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
