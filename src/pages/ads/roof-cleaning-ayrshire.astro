@@ -4,14 +4,13 @@ import { AdHeader } from "@/sections/Header/components/AdHeader";
 import { ReviewStats } from "@/sections/ReviewsSection/components/ReviewStats";
 import { AdQuoteFormSection } from "@/pages/ads/components/AdQuoteFormSection";
 import { FAQItem } from "@/pages/contact/sections/FAQSection/components/FAQItem";
-import { getCategoryBySlug, getServicesForCategory } from "@/data/categories";
+import { getCategoryBySlug } from "@/data/categories";
 import { getServiceBySlug } from "@/data/services";
 import { reviews } from "@/data/reviews";
 import { locations } from "@/data/locations";
 import { absoluteUrl, brandName, citiesLabel } from "@/data/business";
 
 const category = getCategoryBySlug("roof-cleaning-ayrshire")!;
-const includedServices = getServicesForCategory(category);
 const roofService = getServiceBySlug("roof-cleaning-moss-removal")!;
 const canonical = absoluteUrl("/ads/roof-cleaning-ayrshire");
 const heroImage = "/gal_11.jpg";
@@ -301,33 +300,15 @@ const howItWorksSteps = [
         </div>
       </section>
 
-      <!-- What's included -->
-      <section class="box-border caret-transparent pt-[70px] md:pt-[110px]">
-        <div class="box-border caret-transparent max-w-[980px] mx-auto px-[15px] md:px-[30px]">
-          <h2 class="text-white text-2xl font-bold box-border caret-transparent leading-[30px] mb-8 text-center md:text-4xl md:leading-[43.2px]">
-            What's Included
-          </h2>
-          <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
-            {includedServices.map((service) => (
-              <div class="rounded-xl bg-neutral-900/75 border border-white/10 p-6 text-center">
-                <img src={service.iconUrl} alt={service.iconAlt} class="mx-auto mb-4 h-10 w-10" />
-                <h3 class="text-white text-lg font-bold mb-2">{service.shortTitle}</h3>
-                <p class="text-slate-300 text-sm">{service.cardDescription}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <!-- Gallery -->
       <section class="box-border caret-transparent pt-[70px] md:pt-[110px]">
         <div class="box-border caret-transparent max-w-[980px] mx-auto px-[15px] md:px-[30px]">
           <h2 class="text-white text-2xl font-bold box-border caret-transparent leading-[30px] mb-8 text-center md:text-4xl md:leading-[43.2px]">
             Recent Roof Cleaning Work
           </h2>
-          <div class="flex overflow-x-auto snap-x snap-mandatory gap-3 -mx-[15px] px-[15px] md:grid md:grid-cols-4 md:gap-5 md:overflow-visible md:mx-0 md:px-0">
+          <div class="grid grid-cols-1 gap-3 md:grid-cols-4 md:gap-5">
             {roofGalleryImages.map((src) => (
-              <div class="relative overflow-hidden rounded-[16px] w-full shrink-0 snap-center md:w-auto md:shrink" style="aspect-ratio: 4/3">
+              <div class="relative overflow-hidden rounded-[16px]" style="aspect-ratio: 4/3">
                 <img
                   src={src}
                   alt={`Roof cleaning and moss removal before and after by ${brandName()} in ${citiesLabel()}`}
