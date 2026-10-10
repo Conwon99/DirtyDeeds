@@ -12,8 +12,9 @@ import { CTASection } from "@/sections/Footer/components/CTASection";
 import { Footer } from "@/sections/Footer";
 import { locations, getNearbyLocationLinks, type LocationPage } from "@/data/locations";
 import { categories } from "@/data/categories";
+import { projects } from "@/data/projects";
 import { buildFaqSchema } from "@/data/faqs";
-import { absoluteUrl, brandName, business } from "@/data/business";
+import { absoluteUrl, business } from "@/data/business";
 
 export function getStaticPaths() {
   return locations.map((location) => ({
@@ -24,6 +25,7 @@ export function getStaticPaths() {
 
 const { location } = Astro.props as { location: LocationPage };
 const nearbyLinks = getNearbyLocationLinks(location);
+const localProjects = projects.filter((project) => project.location.split(", ").includes(location.name));
 const canonical = absoluteUrl(`/locations/${location.slug}`);
 const locationSchema = {
   "@context": "https://schema.org",
@@ -41,10 +43,10 @@ const placeSchema = {
   "@type": "Place",
   "@id": `${canonical}#place`,
   name: location.name,
-  description: location.description,
+  description: location.localContext,
   containedInPlace: {
     "@type": "AdministrativeArea",
-    name: business.region,
+    name: location.councilArea,
   },
 };
 const faqSchema = buildFaqSchema(location.locationFaqs);
@@ -92,9 +94,29 @@ const breadcrumbSchema = {
             <h2 class="text-gray-900 text-[28px] font-bold box-border caret-transparent leading-[36px] mb-5 md:text-[44px] md:leading-[54px]">
               Outdoor Services in {location.name}
             </h2>
-            <p class="text-gray-700 box-border caret-transparent mb-6">
-              {location.description} Whether you need driveway cleaning, patio restoration, roof moss removal or gutter clearing, {brandName()} can help with professional results and practical advice.
-            </p>
+            <p class="text-gray-700 box-border caret-transparent mb-4">{location.localContext}</p>
+            <p class="text-gray-700 box-border caret-transparent mb-6">{location.serviceFocus}</p>
+
+            <h3 class="text-gray-900 text-xl font-bold box-border caret-transparent mb-3">Areas covered in and around {location.name}</h3>
+            <p class="text-gray-700 box-border caret-transparent mb-2">{location.councilArea} · {location.postcodes} postcodes</p>
+            <ul class="flex flex-wrap gap-2 pl-0 list-none mb-8">
+              {location.areasCovered.map((area) => (
+                <li class="text-gray-800 text-sm bg-gray-100 rounded-full px-3 py-1">{area}</li>
+              ))}
+            </ul>
+
+            {localProjects.length > 0 && (
+              <>
+                <h3 class="text-gray-900 text-xl font-bold box-border caret-transparent mb-3">Recent work in {location.name}</h3>
+                <ul class="grid grid-cols-1 gap-2 pl-0 list-none mb-8 md:grid-cols-2">
+                  {localProjects.map((project) => (
+                    <li>
+                      <a href={`/projects/${project.slug}`} class="text-[#ea580c] hover:underline font-medium">{project.title}</a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
 
             <h3 class="text-gray-900 text-xl font-bold box-border caret-transparent mb-3">Services in {location.name}</h3>
             <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 mb-8">
