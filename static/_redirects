@@ -9,8 +9,16 @@
 # 301 redirects — category slug rename (ayr-kilmarnock → ayrshire)
 /exterior-cleaning-ayr-kilmarnock   /exterior-cleaning-ayrshire   301
 /roof-cleaning-ayr-kilmarnock       /roof-cleaning-ayrshire       301
-/locations/:town/exterior-cleaning-ayr-kilmarnock   /locations/:town/exterior-cleaning-ayrshire   301
-/locations/:town/roof-cleaning-ayr-kilmarnock       /locations/:town/roof-cleaning-ayrshire       301
+
+# 301 redirects — removed thin town + service pages, consolidated into town pages
+/locations/:town/exterior-cleaning-ayrshire         /locations/:town   301
+/locations/:town/roof-cleaning-ayrshire             /locations/:town   301
+/locations/:town/exterior-cleaning-ayr-kilmarnock   /locations/:town   301
+/locations/:town/roof-cleaning-ayr-kilmarnock       /locations/:town   301
+
+# 301 redirects — removed/merged service pages
+/services/free-quotes                  /contact                      301
+/services/decking-composite-cleaning   /exterior-cleaning-ayrshire   301
 
 # Prevent 404s for common requests
 /admin/*      /index.html   404

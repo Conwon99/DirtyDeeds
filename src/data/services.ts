@@ -326,56 +326,7 @@ export const services: ServicePage[] = [
       },
     ],
   },
-  {
-    slug: "free-quotes",
-    title: `Free Quotes in ${cities}`,
-    shortTitle: "Free Quotes",
-    navTitle: "Free Quotes",
-    parentCategorySlug: null,
-    description: `Request a free quote from ${fullName} for driveway cleaning, roof cleaning, patio washing, gutter clearing and soft wash in ${region}.`,
-    cardDescription: `Message or call ${brand} to discuss exterior cleaning, roof work, biocide treatment and arrange a free, no-obligation quote.`,
-    iconUrl: `${serviceIconBase}/670f922a6c5c1d8102612221_service-02.svg`,
-    iconAlt: "Free quote service icon",
-    image: "/gal_02.jpg",
-    imageAlt: `${fullName} exterior cleaning in ${region}`,
-    about: `Not sure where to start with exterior maintenance? ${fullName} offers free, no-obligation quotes across ${region}. Jake can discuss driveway cleaning, patio washing, decking cleaning, soft wash house washing, roof cleaning, gutter clearing and biocide treatment. A quick message or call on ${phone} is enough to get the conversation started. Photos of the area help speed up quoting, especially for driveways, roofs and patios. There is no pressure — just honest advice on what your property needs and what it will cost.`,
-    why: `A free quote clarifies scope, pricing and timing before any work begins, helping you compare options and book the right services with confidence.`,
-    signsYouNeed: `If you know something needs attention but are unsure of cost, method or which service to book first, a free quote is the right starting point. Maybe the driveway, roof and gutters all need work — or you want patio cleaning alongside a soft wash. Perhaps you have seen ${brand}'s results on Facebook and want to know if your property is in the service area. Whatever the situation, a short conversation with Jake saves guesswork.`,
-    options: `${brand} quotes for every service listed on this site: driveway cleaning, patio and path cleaning, decking cleaning, soft wash house washing, roof cleaning and moss removal, gutter clearing, fascia and soffit cleaning and biocide treatments. Contact via phone, WhatsApp, the website form or Facebook message. Combined quotes for multiple jobs are welcome.`,
-    localContext: `${brand} serves Rankinston, Prestwick, Troon, Doonfoot, Alloway, Mossblown and towns across ${region}. If you are nearby, get in touch to confirm coverage. Local knowledge means realistic advice on moss and algae typical in your area.`,
-    whatToExpect: `Send a message or call with the service you need and your location. Share photos if you have them. Jake will discuss the job, confirm coverage and provide a free quote — arranging a visit first if needed for larger or complex work. Once you are happy, a date is booked and work proceeds as agreed.`,
-    whyChooseUs: `Free quotes, clear communication and fully insured local service. Customers praise Jake for being genuine, fairly priced and easy to deal with. ${brand} covers all exterior cleaning services so you can book one trusted team.`,
-    benefits: [
-      "Free, no-obligation quotes for all exterior cleaning services.",
-      "Clear advice from Jake before work begins.",
-      `Local coverage across ${region}.`,
-      "Combined quotes available for multiple jobs in one visit.",
-    ],
-    process: [
-      "Message or call with the service you need and your location.",
-      "Share photos or details to help explain the job.",
-      "Receive a free quote — with a visit arranged if needed.",
-      "Book a date and agree practical details before work starts.",
-    ],
-    faq: [
-      {
-        question: "What details should I send for a quote?",
-        answer: `A short description, your location and photos of the work area are helpful — especially for driveways, roofs and patios.`,
-      },
-      {
-        question: `Which areas do you cover in ${region}?`,
-        answer: `${brand} covers Rankinston and towns across ${region} including Prestwick, Troon, Doonfoot and Alloway.`,
-      },
-      {
-        question: `How do I request a free quote near me in ${region}?`,
-        answer: `Call ${phone}, message via WhatsApp or Facebook, or use the website contact form. Jake will respond with a free, no-obligation quote.`,
-      },
-    ],
-  },
 ];
 
 export const getServiceBySlug = (slug: string) =>
   services.find((service) => service.slug === slug);
-
-export const getServicesForNav = () =>
-  services.filter((service) => service.slug !== "free-quotes");

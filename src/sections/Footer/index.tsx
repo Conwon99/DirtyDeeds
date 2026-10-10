@@ -136,16 +136,8 @@ export const Footer = () => {
 
                 ))}
 
-                <a href="/locations/ayr/exterior-cleaning-ayr-kilmarnock" className="text-white/60 text-xs box-border caret-transparent hover:text-[#ea580c] pl-3 transition-colors duration-300">Exterior Cleaning in Ayr</a>
 
-                <a href="/locations/kilmarnock/exterior-cleaning-ayr-kilmarnock" className="text-white/60 text-xs box-border caret-transparent hover:text-[#ea580c] pl-3 transition-colors duration-300">Exterior Cleaning in Kilmarnock</a>
-
-                <a href="/locations/ayr/roof-cleaning-ayr-kilmarnock" className="text-white/60 text-xs box-border caret-transparent hover:text-[#ea580c] pl-3 transition-colors duration-300">Roof Cleaning in Ayr</a>
-
-                <a href="/locations/kilmarnock/roof-cleaning-ayr-kilmarnock" className="text-white/60 text-xs box-border caret-transparent hover:text-[#ea580c] pl-3 transition-colors duration-300">Roof Cleaning in Kilmarnock</a>
-
-
-                {services.filter((s) => s.slug !== "free-quotes").map((service) => (
+                {services.map((service) => (
 
                   <a key={service.slug} href={`/services/${service.slug}`} className="text-white/80 text-sm box-border caret-transparent hover:text-[#ea580c] hover:decoration-transparent transition-colors duration-300">
 
